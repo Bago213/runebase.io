@@ -11,6 +11,8 @@ app.use('/assets', [
     express.static(__dirname + '/node_modules/waypoints/lib/'),
     express.static(__dirname + '/node_modules/particles.js/'),
     express.static(__dirname + '/public/js/'),
+    express.static(__dirname + '/public/images/'),
+    express.static(__dirname + '/public/css/'),
 ]);
 
 app.get("/", function(request, response){ //root dir
