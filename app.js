@@ -1,8 +1,20 @@
 var fs = require("fs");
 var port = 3000;
 var express = require("express");
-
+var bodyParser  = require("body-parser");
+var webhook = require('express-github-webhook');
+var webhookHandler = webhook({ path: '/webhook', secret: '123456' });
 var app = express();
+app.use(bodyParser.json());
+app.use(webhookHandler);
+ 
+webhookHandler.on('*', function (event, repo, data) {
+    console.log(data["commits"]);
+});
+webhookHandler.on('push', function (repo, data) {
+    //console.log(data["commits"]);
+});
+
 app.use(express.static(__dirname + "/public")); //use static files in ROOT/public folder
 app.use('/assets', [
     express.static(__dirname + '/node_modules/jquery/dist/'),
