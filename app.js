@@ -12,6 +12,7 @@ app.use('/assets', [
     express.static(__dirname + '/node_modules/owl.carousel/dist/'),
     express.static(__dirname + '/node_modules/jquery-countto/'),
     express.static(__dirname + '/node_modules/magnific-popup/dist/'),
+    express.static(__dirname + '/node_modules/particles.js/'),
 ]);
 
 app.get("/", function(request, response){ //root dir
