@@ -9,9 +9,6 @@ app.use('/assets', [
     express.static(__dirname + '/node_modules/jquery.easing/'),
     express.static(__dirname + '/node_modules/bootstrap/dist/js/'), //?
     express.static(__dirname + '/node_modules/waypoints/lib/'),
-    express.static(__dirname + '/node_modules/owl.carousel/dist/'),
-    express.static(__dirname + '/node_modules/jquery-countto/'),
-    express.static(__dirname + '/node_modules/magnific-popup/dist/'),
     express.static(__dirname + '/node_modules/particles.js/'),
 ]);
 
