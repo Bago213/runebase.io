@@ -10,6 +10,7 @@ app.use('/assets', [
     express.static(__dirname + '/node_modules/bootstrap/dist/js/'), //?
     express.static(__dirname + '/node_modules/waypoints/lib/'),
     express.static(__dirname + '/node_modules/particles.js/'),
+    express.static(__dirname + '/public/js/'),
 ]);
 
 app.get("/", function(request, response){ //root dir
