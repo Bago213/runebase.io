@@ -15,17 +15,10 @@ html.no-js(lang='')
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='shortcut icon', type='image/png', href='/assets/runebase.png')
-		link(rel='stylesheet', href='/assets/fonticons.css')
-		link(rel='stylesheet', href='assets/fonts/stylesheet.css')
-		link(rel='stylesheet', href='/assets/font-awesome.min.css')
+		link(rel='stylesheet', href='/assets/stylesheet.css')
 		link(rel='stylesheet', href='/assets/bootstrap.min.css')
-		// Theme Responsive css
 		link(rel='stylesheet', href='/assets/responsive.css')
-		link(rel='stylesheet', href='/assets/animate.css')
-		// Icomoon Icon Fonts
-		link(rel='stylesheet', href='/assets/icomoon.css')
-		// Theme style
-		link(rel='stylesheet', href='/assets/style.css')
+		link(rel='stylesheet', href='../assets/style.css')
 	body(data-spy='scroll', data-target='#navmenu')
 		//if lt IE 8
 			p.browserupgrade
@@ -34,8 +27,6 @@ html.no-js(lang='')
 				|  browser. Please 
 				a(href='http://browsehappy.com/') upgrade your browser
 				|  to improve your experience.
-		// <div class='preloader'><div class='loaded'></div></div>
-		// Home page style
 		header#main_menu.header.navbar-fixed-top
 			.main_menu_bg
 				.container
@@ -43,7 +34,6 @@ html.no-js(lang='')
 						.nave_menu
 							nav.navbar.navbar-default(id='#navmenu')
 								.container-fluid
-									// Brand and toggle get grouped for better mobile display
 									.navbar-header
 										button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
 											span.sr-only Toggle navigation
@@ -52,7 +42,6 @@ html.no-js(lang='')
 											span.icon-bar
 										a.navbar-brand(href='#')
 											img(src='/assets/logo.png')
-									// Collect the nav links, forms, and other content for toggling
 									#bs-example-navbar-collapse-1.collapse.navbar-collapse
 										ul.nav.navbar-nav.navbar-right
 											li
@@ -65,7 +54,6 @@ html.no-js(lang='')
 												a(href='#downloads') Downloads
 											li
 												a(href='#faq') Docs
-		// End of header
 		section#home.home
 			div(style='position: relative;')
 				// particles.js container
@@ -77,7 +65,7 @@ html.no-js(lang='')
 							.main_slider_area
 								.slider
 									.single_slider
-										//
+										
 											<h3>Lorem Ipsum</h3>
 											<p>Put a Pickle on that Rustler</p>
 										.col-sm-6.col-sm-offset-3.nopointer
@@ -90,7 +78,6 @@ html.no-js(lang='')
 													| Runebase-$OSVERSION-0.16.0
 											br
 											p Runebase
-		// End of Banner Section
 		section#about.webhost_service
 			.container-fluid
 				.row
@@ -174,6 +161,54 @@ html.no-js(lang='')
 				.row
 					.col-md-6
 						.gtco-heading
+							h2.gtco-left GIT Issues feed
+							p
+								| Lorem Ipsum
+						.row
+							.col-md-12
+								.feature-left
+									span.icon
+										i.icon-check
+									.feature-copy
+										h3 Lorem Ipsim
+										p
+											| Get Your PickleFix 
+											a(href='https://faucet.runebase.io') Here
+											|  and start minting runes
+							.col-md-12
+								.feature-left
+									span.icon
+										i.icon-check
+									.feature-copy
+										h3 Lorem Ipsim
+										p
+											| We have 
+											a(href='https://tasks.runebase.io') a bounty platform
+											|  where you can solve issues and earn a reward for doing so.
+							.col-md-12
+								.feature-left
+									span.icon
+										i.icon-check
+									.feature-copy
+										h3 Lorem Ipsim
+										p
+											| You can buy runes from 
+											a(href='https://bittrex.com') Lorem Ipsim
+							.col-md-12
+								.feature-left
+									span.icon
+										i.icon-check
+									.feature-copy
+										h3 Lorem Ipsum
+										p Lorem Ipsum
+						.row
+							.col-md-12
+								p
+									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
+										i.icon-apple
+										|  Learn more about Github
+					.col-md-6
+						.gtco-heading
 							h2.gtco-left GIT activity feed
 							p
 								| Lorem Ipsum
@@ -220,16 +255,6 @@ html.no-js(lang='')
 									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
 										i.icon-apple
 										|  Learn more about Github
-					.col-md-6(data-animate-effect='fadeInRight')
-						img.img-responsive(src='/assets/computer.jpg', alt='Berymedia')
-						.gtco-heading
-							br
-							h2.gtco-left Our Ipsum
-							.feature-copy
-								p
-									| Vestibulum cursus, ipsum vel pharetra tempus, magna nisi lacinia velit, sed fringilla nulla tellus at sem. Donec et arcu nec tellus euismod egestas. Sed bibendum urna nec justo efficitur, at vehicula libero porttitor. Sed quis mauris eros. Pellentesque sed turpis facilisis, scelerisque mi quis, ullamcorper nunc. Quisque sollicitudin vitae urna ut sagittis. Phasellus scelerisque turpis at quam vestibulum, nec luctus metus tincidunt. Nulla ut laoreet ex. Donec molestie eros risus, eu porta nulla mollis et. Nunc metus lectus, tempus eleifend rutrum at, finibus a metus. Nulla facilisi.
-								p
-									| Share the best of you with pickles through our picklefix program.
 		section#downloads.webhost_service
 			.container-fluid
 				.row
@@ -354,23 +379,17 @@ html.no-js(lang='')
 												a(href='#downloads') Placeholder
 											li
 												a(href='#working') Placeholder
-		// End of contact With Map Section
 		footer#footer.footer
 			.container
 				.row
 					.main_footer.text-center
 						p All Rights Reserved
-		// End of footer section
-		// STRAT SCROLL TO TOP
 		.scrollup
 			a(href='#')
 				i.fa.fa-chevron-up
 		script(src='/assets/jquery.min.js')
-		// jQuery Easing
 		script(src='/assets/jquery.easing.min.js')
-		// Bootstrap
 		script(src='/assets/bootstrap.min.js')
-		// Waypoints
 		script(src='/assets/jquery.waypoints.min.js')
 		script(src='/assets/particles.js')
 		script(src='/assets/custom.js')
