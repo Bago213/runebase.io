@@ -1,11 +1,12 @@
 doctype html
 //if lt IE 7
-	html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='')  
+	html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='')
 //if IE 7
-	html.no-js.lt-ie9.lt-ie8(lang='')  
+	html.no-js.lt-ie9.lt-ie8(lang='')
 //if IE 8
-	html.no-js.lt-ie9(lang='')  
-// [if gt IE 8] <!
+	html.no-js.lt-ie9(lang='')
+//if gt IE 8
+	| [if gt IE 8]
 html.no-js(lang='')
 	// <![endif]
 	head
@@ -25,34 +26,31 @@ html.no-js(lang='')
 				strong outdated
 				|  browser. Please 
 				a(href='http://browsehappy.com/') upgrade your browser
-				|  to improve your experience.
-		header#main_menu.header.navbar-fixed-top
+				|  to
+				|                 improve your experience.
+		header#main_menu.header.fixed-top
 			.main_menu_bg
 				.container
 					.row
 						.nave_menu
-							nav.navbar.navbar-default(id='#navmenu')
-								.container-fluid
-									.navbar-header
-										button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-											span.sr-only Toggle navigation
-											span.icon-bar
-											span.icon-bar
-											span.icon-bar
-										a.navbar-brand(href='#')
-											img(src='/assets/logo.png')
-									#bs-example-navbar-collapse-1.collapse.navbar-collapse
-										ul.nav.navbar-nav.navbar-right
-											li
-												a.showpointer(href='#about') About
-											li
-												a.showpointer(href='#feature') Community
-											li
-												a.showpointer(href='#services') Services
-											li
-												a(href='#downloads') Downloads
-											li
-												a(href='#faq') Docs
+							nav.navbar.navbar-light.bg-light.navbar-expand-md(id='#navmenu')
+								button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+									span.sr-only Toggle navigation
+									| ☰
+								a.navbar-brand(href='#')
+									img(src='/assets/logo.png')
+								#bs-example-navbar-collapse-1.collapse.navbar-collapse
+									ul.nav.navbar-nav.ml-auto
+										li.nav-item
+											a.showpointer.nav-link(href='#about') About
+										li.nav-item
+											a.showpointer.nav-link(href='#feature') Community
+										li.nav-item
+											a.showpointer.nav-link(href='#services') Services
+										li.nav-item
+											a.nav-link(href='#downloads') Downloads
+										li.nav-item
+											a.nav-link(href='#faq') Docs
 		section#home.home
 			div(style='position: relative;')
 				// particles.js container
@@ -64,64 +62,75 @@ html.no-js(lang='')
 							.main_slider_area
 								.slider
 									.single_slider
-										
-											<h3>Lorem Ipsum</h3>
-											<p>Put a Pickle on that Rustler</p>
-										.col-sm-6.col-sm-offset-3.nopointer
-											.single_slider_img_icon.nopointer
-												div(style='height:  400px;')
-												img.nopointer(style='display:  none;', src='/assets/runebase.png', width='350', alt='')
-											.call_us_bottom
-												a.btn.btn-lg.showpointer(style='', href='#downloads')
-													i.fa.fa-download
-													| Runebase-$OSVERSION-0.16.0
-											br
-											p Runebase
+										h3 Lorem Ipsum
+										p Put a Pickle on that Rustler
+									.col-md-6.offset-sm-3.nopointer
+										.single_slider_img_icon.nopointer
+											div(style='height:  400px;')
+											img.nopointer(style='display:  none;', src='/assets/runebase.png', width='350', alt='')
+										.call_us_bottom
+											a.btn.btn-lg.showpointer(style='', href='#downloads')
+												i.fa.fa-download
+												| Runebase-$OSVERSION-0.16.0
+										br
+										p Runebase
 		section#about.webhost_service
 			.container-fluid
 				.row
 					.main_webhost_service_area.text-center
-						.col-lg-12.no-padding
+						.col-xl-12.no-padding
 							.single_webhost_left(style='background-color: #000002')
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_content
 											h3(style='color: aliceblue') Community?
 											p
-												| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ullamcorper lorem. Sed turpis mi, sodales a odio quis, maximus posuere magna. Quisque ex odio, tempus id porta id, molestie sed velit. Duis nisi quam, convallis sit amet arcu at, gravida consectetur dolor. Donec nec aliquam mi. Morbi vitae ipsum sit amet eros feugiat convallis a vitae mauris. Suspendisse potenti. Aenean ullamcorper sem quis diam pellentesque, sed aliquam nisi facilisis. Pellentesque pellentesque, mi non dictum varius, leo eros vehicula purus, ac tempor purus justo quis mi. Proin non condimentum enim. Phasellus et lacinia orci, vulputate ullamcorper dui. Donec ac justo ultricies, sollicitudin metus rutrum, feugiat purus. Duis vehicula ex eu massa congue vulputate. Donec justo metus, eleifend ut congue ut, sollicitudin vitae lacus. Praesent luctus leo urna, eget dictum tellus ultricies a. Curabitur a sapien nibh.
+												| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+												| ullamcorper lorem. Sed turpis mi, sodales a odio quis, maximus posuere
+												| magna. Quisque ex odio, tempus id porta id, molestie sed velit. Duis nisi
+												| quam, convallis sit amet arcu at, gravida consectetur dolor. Donec nec
+												| aliquam mi. Morbi vitae ipsum sit amet eros feugiat convallis a vitae mauris.
+												| Suspendisse potenti. Aenean ullamcorper sem quis diam pellentesque, sed
+												| aliquam nisi facilisis. Pellentesque pellentesque, mi non dictum varius,
+												| leo eros vehicula purus, ac tempor purus justo quis mi. Proin non condimentum
+												| enim. Phasellus et lacinia orci, vulputate ullamcorper dui. Donec ac justo
+												| ultricies, sollicitudin metus rutrum, feugiat purus. Duis vehicula ex eu
+												| massa congue vulputate. Donec justo metus, eleifend ut congue ut, sollicitudin
+												| vitae lacus. Praesent luctus leo urna, eget dictum tellus ultricies a.
+												| Curabitur a sapien nibh.
 											a.btn(href='#feature') More
 		section#feature.feature
 			.feature_overlay
 				.container
 					.row
 						.main_feature_content_area
-							.col-sm-12
+							.col-md-12
 								.heading_title.text-center
 									// <h2>Optional Title</h2>
 									// <p>Optional text</p>
 							.main_feature_content.text-center
-								.col-sm-3
+								.col-md-3
 									.single_feature
 										.single_feature_img
 											img(src='/assets/award.png', height='128px', width='128px', alt='')
 										.separator
 										h3 PlaceHolder
 										p PlaceHolder Text
-								.col-sm-3
+								.col-md-3
 									.single_feature
 										.single_feature_img
 											img(src='/assets/block.png', height='128px', width='128px', alt='')
 										.separator
 										h3 PlaceHolder
 										p PlaceHolder Text
-								.col-sm-3
+								.col-md-3
 									.single_feature
 										.single_feature_img
 											img(src='/assets/treasure.png', height='128px', width='128px', alt='')
 										.separator
 										h3 PlaceHolder
 										p PlaceHolder Text
-								.col-sm-3
+								.col-md-3
 									.single_feature
 										.single_feature_img
 											img(src='/assets/lock.png', height='128px', width='128px', alt='')
@@ -132,10 +141,10 @@ html.no-js(lang='')
 			.container-fluid
 				.row
 					.main_webhost_service_area.text-center
-						.col-sm-6.no-padding
+						.col-md-6.no-padding
 							.single_webhost_left
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_img
 											img(src='/assets/explorer.png', alt='')
 										.single_webhost_left_content
@@ -144,27 +153,25 @@ html.no-js(lang='')
 												| Insight explorer makes it easy to track transactions on runebase chain.
 												| You can explorer blocks/addresses as well as publish transactions.
 											a.btn(href='https://explorer.runebase.io') More
-						.col-sm-6.no-padding
+						.col-md-6.no-padding
 							.single_webhost_left
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_img
 											img(src='/assets/pool.png', alt='')
 										.single_webhost_left_content
 											h3(style='color: aliceblue') Staking Guide
-											p
-												| This is Runebase's official Staking Guide, used to mint runes.
+											p This is Runebase's official Staking Guide, used to mint runes.
 											a.btn(href='https://docs.runebase.io') More
 		section#working.gtco-section.border-bottom(data-section='how-it-works')
 			.gtco-container
 				.row
-					.col-md-6
+					.col-lg-6
 						.gtco-heading
 							h2.gtco-left GIT Issues feed
-							p
-								| Lorem Ipsum
+							p Lorem Ipsum
 						.row
-							.col-md-12
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -173,8 +180,9 @@ html.no-js(lang='')
 										p
 											| Get Your PickleFix 
 											a(href='https://faucet.runebase.io') Here
-											|  and start minting runes
-							.col-md-12
+											|  and start
+											|                                             minting runes
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -183,8 +191,9 @@ html.no-js(lang='')
 										p
 											| We have 
 											a(href='https://tasks.runebase.io') a bounty platform
-											|  where you can solve issues and earn a reward for doing so.
-							.col-md-12
+											|  where
+											|                                             you can solve issues and earn a reward for doing so.
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -193,7 +202,7 @@ html.no-js(lang='')
 										p
 											| You can buy runes from 
 											a(href='https://bittrex.com') Lorem Ipsim
-							.col-md-12
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -201,18 +210,17 @@ html.no-js(lang='')
 										h3 Lorem Ipsum
 										p Lorem Ipsum
 						.row
-							.col-md-12
+							.col-lg-12
 								p
 									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
 										i.icon-apple
 										|  Learn more about Github
-					.col-md-6
+					.col-lg-6
 						.gtco-heading
 							h2.gtco-left GIT activity feed
-							p
-								| Lorem Ipsum
+							p Lorem Ipsum
 						.row
-							.col-md-12
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -221,8 +229,9 @@ html.no-js(lang='')
 										p
 											| Get Your PickleFix 
 											a(href='https://faucet.runebase.io') Here
-											|  and start minting runes
-							.col-md-12
+											|  and start
+											|                                             minting runes
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -231,8 +240,9 @@ html.no-js(lang='')
 										p
 											| We have 
 											a(href='https://tasks.runebase.io') a bounty platform
-											|  where you can solve issues and earn a reward for doing so.
-							.col-md-12
+											|  where
+											|                                             you can solve issues and earn a reward for doing so.
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -241,7 +251,7 @@ html.no-js(lang='')
 										p
 											| You can buy runes from 
 											a(href='https://bittrex.com') Lorem Ipsim
-							.col-md-12
+							.col-lg-12
 								.feature-left
 									span.icon
 										i.icon-check
@@ -249,7 +259,7 @@ html.no-js(lang='')
 										h3 Lorem Ipsum
 										p Lorem Ipsum
 						.row
-							.col-md-12
+							.col-lg-12
 								p
 									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
 										i.icon-apple
@@ -258,10 +268,10 @@ html.no-js(lang='')
 			.container-fluid
 				.row
 					.main_webhost_service_area.text-center
-						.col-sm-4.no-padding
+						.col-md-4.no-padding
 							.single_webhost_left
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_img
 											img(src='/assets/windows.png', alt='')
 										.single_webhost_left_content
@@ -269,23 +279,23 @@ html.no-js(lang='')
 											a.btn(href='https://download.runebase.io/runebase-0.16.0-win32-setup.exe', style='width: 300px;') 32-bit Runebase 0.16.0 - installer
 											a.btn(href='https://download.runebase.io/runebase-0.16.0-win64-setup.exe', style='width: 300px;') 64-bit Runebase 0.16.0 - installer
 											a.btn(href='https://download.runebase.io/runebase-0.16.0-win32.zip', style='width: 300px;') 32-bit Runebase 0.16.0 portable 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-win64.zip', style='width: 300px;') 64-bit Runebase 0.16.0 portable 
-						.col-sm-4.no-padding
+											a.btn(href='https://download.runebase.io/runebase-0.16.0-win64.zip', style='width: 300px;') 64-bit Runebase 0.16.0 portable
+						.col-md-4.no-padding
 							.single_webhost_left(style='background-color: rgb(231, 143, 27)')
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_img
 											img(src='/assets/linux.png', alt='')
 										.single_webhost_left_content
 											h3(style='color: aliceblue') Linux
 											a.btn(href='https://download.runebase.io/runebase-0.16.0-x86_64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-x86_64.tar.gz 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-i686-pc-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-i686.tar.gz 
+											a.btn(href='https://download.runebase.io/runebase-0.16.0-i686-pc-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-i686.tar.gz
 											a.btn(href='https://download.runebase.io/runebase-0.16.0-aarch64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-aarch64.tar.gz 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-arm-linux-gnueabihf.tar.gz', style='width: 300px;') runebase-0.16.0-arm.tar.gz 
-						.col-sm-4.no-padding
+											a.btn(href='https://download.runebase.io/runebase-0.16.0-arm-linux-gnueabihf.tar.gz', style='width: 300px;') runebase-0.16.0-arm.tar.gz
+						.col-md-4.no-padding
 							.single_webhost_left(style='background-color:brown')
 								.row
-									.col-sm-8.col-sm-offset-2
+									.col-md-8.offset-sm-2
 										.single_webhost_left_img
 											img(src='/assets/mac.png', alt='')
 										.single_webhost_left_content
@@ -297,11 +307,11 @@ html.no-js(lang='')
 		section#faq.gtco-section(data-section='faq')
 			.gtco-container
 				.row
-					.col-md-8.col-md-offset-2.text-center.gtco-heading
+					.col-lg-8.offset-md-2.text-center.gtco-heading
 						h2 Loren Ipsum?
 						p Here are some most frequently Lorem Ipsum questions.
 				.row
-					.col-md-6
+					.col-lg-6
 						.gtco-accordion
 							.gtco-accordion-heading
 								.icon
@@ -310,7 +320,19 @@ html.no-js(lang='')
 							.gtco-accordion-content
 								.inner
 									p
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ullamcorper lorem. Sed turpis mi, sodales a odio quis, maximus posuere magna. Quisque ex odio, tempus id porta id, molestie sed velit. Duis nisi quam, convallis sit amet arcu at, gravida consectetur dolor. Donec nec aliquam mi. Morbi vitae ipsum sit amet eros feugiat convallis a vitae mauris. Suspendisse potenti. Aenean ullamcorper sem quis diam pellentesque, sed aliquam nisi facilisis. Pellentesque pellentesque, mi non dictum varius, leo eros vehicula purus, ac tempor purus justo quis mi. Proin non condimentum enim. Phasellus et lacinia orci, vulputate ullamcorper dui. Donec ac justo ultricies, sollicitudin metus rutrum, feugiat purus. Duis vehicula ex eu massa congue vulputate. Donec justo metus, eleifend ut congue ut, sollicitudin vitae lacus. Praesent luctus leo urna, eget dictum tellus ultricies a. Curabitur a sapien nibh.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+										| ullamcorper lorem. Sed turpis mi, sodales a odio quis, maximus posuere
+										| magna. Quisque ex odio, tempus id porta id, molestie sed velit. Duis nisi
+										| quam, convallis sit amet arcu at, gravida consectetur dolor. Donec nec
+										| aliquam mi. Morbi vitae ipsum sit amet eros feugiat convallis a vitae mauris.
+										| Suspendisse potenti. Aenean ullamcorper sem quis diam pellentesque, sed
+										| aliquam nisi facilisis. Pellentesque pellentesque, mi non dictum varius,
+										| leo eros vehicula purus, ac tempor purus justo quis mi. Proin non condimentum
+										| enim. Phasellus et lacinia orci, vulputate ullamcorper dui. Donec ac justo
+										| ultricies, sollicitudin metus rutrum, feugiat purus. Duis vehicula ex eu
+										| massa congue vulputate. Donec justo metus, eleifend ut congue ut, sollicitudin
+										| vitae lacus. Praesent luctus leo urna, eget dictum tellus ultricies a.
+										| Curabitur a sapien nibh.
 						.gtco-accordion
 							.gtco-accordion-heading
 								.icon
@@ -319,7 +341,11 @@ html.no-js(lang='')
 							.gtco-accordion-content
 								.inner
 									p
-										| Mauris fermentum nisi sem. Morbi ut purus hendrerit, imperdiet magna nec, varius urna. Donec hendrerit a sem eu viverra. In tincidunt enim in turpis mattis, ultricies sodales ex volutpat. Vestibulum non purus lacus. Etiam eu neque dui. Nullam vitae velit elit. Nullam urna erat, feugiat vitae lacus vel, dictum euismod lorem. Mauris ultricies nec erat eu convallis.
+										| Mauris fermentum nisi sem. Morbi ut purus hendrerit, imperdiet magna nec,
+										| varius urna. Donec hendrerit a sem eu viverra. In tincidunt enim in turpis
+										| mattis, ultricies sodales ex volutpat. Vestibulum non purus lacus. Etiam
+										| eu neque dui. Nullam vitae velit elit. Nullam urna erat, feugiat vitae
+										| lacus vel, dictum euismod lorem. Mauris ultricies nec erat eu convallis.
 						.gtco-accordion
 							.gtco-accordion-heading
 								.icon
@@ -327,9 +353,8 @@ html.no-js(lang='')
 								h3 Lorem Ipsum?
 							.gtco-accordion-content
 								.inner
-									p
-										| Lorem Ipsum
-					.col-md-6
+									p Lorem Ipsum
+					.col-lg-6
 						.gtco-accordion
 							.gtco-accordion-heading
 								.icon
@@ -337,8 +362,7 @@ html.no-js(lang='')
 								h3 Lorem Ipsum?
 							.gtco-accordion-content
 								.inner
-									p
-										| Lorum Ipsum
+									p Lorum Ipsum
 						.gtco-accordion
 							.gtco-accordion-heading
 								.icon
@@ -355,16 +379,21 @@ html.no-js(lang='')
 							.gtco-accordion-content
 								.inner
 									p
-										| Sed fringilla, neque ac bibendum aliquet, arcu leo suscipit sapien, non scelerisque tellus nisi vitae mauris. Integer a ligula leo. Etiam eget leo et ligula fringilla bibendum eget id diam. Curabitur dolor odio, facilisis mattis fermentum nec, venenatis quis tortor. Duis finibus pretium dictum. Curabitur pulvinar auctor finibus. Nullam rutrum ligula eu neque ornare blandit. Nulla maximus dui lectus. Praesent eleifend eu odio eu varius..
+										| Sed fringilla, neque ac bibendum aliquet, arcu leo suscipit sapien, non
+										| scelerisque tellus nisi vitae mauris. Integer a ligula leo. Etiam eget
+										| leo et ligula fringilla bibendum eget id diam. Curabitur dolor odio, facilisis
+										| mattis fermentum nec, venenatis quis tortor. Duis finibus pretium dictum.
+										| Curabitur pulvinar auctor finibus. Nullam rutrum ligula eu neque ornare
+										| blandit. Nulla maximus dui lectus. Praesent eleifend eu odio eu varius..
 		section#contact.contact
 			.container
 				.row
 					.main_contact
 						.contactwithmap_content
 							.contact_overlay
-								.col-sm-8.col-xs-12
+								.col-md-8.col-12
 									.locations_map
-								.col-sm-3.col-xs-12
+								.col-md-3.col-12
 									.contactwithmap_menu
 										h2 Lorem Ipsum
 										ul.footer_menu
@@ -386,9 +415,12 @@ html.no-js(lang='')
 		.scrollup
 			a(href='#')
 				i.fa.fa-chevron-up
-		script(src='/assets/jquery.min.js')
-		script(src='/assets/jquery.easing.min.js')
-		script(src='/assets/bootstrap.min.js')
-		script(src='/assets/jquery.waypoints.min.js')
-		script(src='/assets/particles.js')
-		script(src='/assets/custom.js')
+
+
+
+			script(src='/assets/jquery.min.js')
+			script(src='/assets/jquery.easing.min.js')
+			script(src='/assets/bootstrap.min.js')
+			script(src='/assets/jquery.waypoints.min.js')
+			script(src='/assets/particles.js')
+			script(src='/assets/custom.js')
