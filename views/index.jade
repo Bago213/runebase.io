@@ -29,28 +29,25 @@ html.no-js(lang='')
 				|  to
 				|                 improve your experience.
 		header#main_menu.header.fixed-top
-			.main_menu_bg
-				.container
-					.row
-						.nave_menu
-							nav.navbar.navbar-light.bg-light.navbar-expand-md(id='#navmenu')
-								button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-									span.sr-only Toggle navigation
-									| ☰
-								a.navbar-brand(href='#')
-									img(src='/assets/logo.png')
-								#bs-example-navbar-collapse-1.collapse.navbar-collapse
-									ul.nav.navbar-nav.ml-auto
-										li.nav-item
-											a.showpointer.nav-link(href='#about') About
-										li.nav-item
-											a.showpointer.nav-link(href='#feature') Community
-										li.nav-item
-											a.showpointer.nav-link(href='#services') Services
-										li.nav-item
-											a.nav-link(href='#downloads') Downloads
-										li.nav-item
-											a.nav-link(href='#faq') Docs
+			.container
+				nav.navbar.navbar-light.bg-light.navbar-expand-md(id='#navmenu')
+					button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+						span.sr-only Toggle navigation
+						| ☰
+					a.navbar-brand(href='#')
+						img(src='/assets/logo.png')
+					#bs-example-navbar-collapse-1.collapse.navbar-collapse
+						ul.nav.navbar-nav.ml-auto
+							li.nav-item
+								a.showpointer.nav-link(href='#about') About
+							li.nav-item
+								a.showpointer.nav-link(href='#feature') Community
+							li.nav-item
+								a.showpointer.nav-link(href='#services') Services
+							li.nav-item
+								a.nav-link(href='#downloads') Downloads
+							li.nav-item
+								a.nav-link(href='#faq') Docs
 		section#home.home
 			div(style='position: relative;')
 				// particles.js container
@@ -59,7 +56,7 @@ html.no-js(lang='')
 				.home_overlay
 					.container
 						.row
-							.main_slider_area
+							.main_slider_area.col-md-8.offset-sm-2
 								.slider
 									.single_slider
 										h3 Lorem Ipsum
@@ -103,66 +100,55 @@ html.no-js(lang='')
 			.feature_overlay
 				.container
 					.row
-						.main_feature_content_area
-							.col-md-12
-								.heading_title.text-center
-									// <h2>Optional Title</h2>
-									// <p>Optional text</p>
-							.main_feature_content.text-center
-								.col-md-3
-									.single_feature
-										.single_feature_img
-											img(src='/assets/award.png', height='128px', width='128px', alt='')
-										.separator
-										h3 PlaceHolder
-										p PlaceHolder Text
-								.col-md-3
-									.single_feature
-										.single_feature_img
-											img(src='/assets/block.png', height='128px', width='128px', alt='')
-										.separator
-										h3 PlaceHolder
-										p PlaceHolder Text
-								.col-md-3
-									.single_feature
-										.single_feature_img
-											img(src='/assets/treasure.png', height='128px', width='128px', alt='')
-										.separator
-										h3 PlaceHolder
-										p PlaceHolder Text
-								.col-md-3
-									.single_feature
-										.single_feature_img
-											img(src='/assets/lock.png', height='128px', width='128px', alt='')
-										.separator
-										h3 PlaceHolder
-										p PlaceHolder Text
+						.single_feature.col
+							.single_feature_img
+								img(src='/assets/award.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.single_feature.col
+							.single_feature_img
+								img(src='/assets/block.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.single_feature.col
+							.single_feature_img
+								img(src='/assets/treasure.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.single_feature.col
+							.single_feature_img
+								img(src='/assets/lock.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text
 		section#services.webhost_service
-			.container-fluid
-				.row
-					.main_webhost_service_area.text-center
-						.col-md-6.no-padding
-							.single_webhost_left
-								.row
-									.col-md-8.offset-sm-2
-										.single_webhost_left_img
-											img(src='/assets/explorer.png', alt='')
-										.single_webhost_left_content
-											h3(style='color: aliceblue') Runebase Explorer
-											p
-												| Insight explorer makes it easy to track transactions on runebase chain.
-												| You can explorer blocks/addresses as well as publish transactions.
-											a.btn(href='https://explorer.runebase.io') More
-						.col-md-6.no-padding
-							.single_webhost_left
-								.row
-									.col-md-8.offset-sm-2
-										.single_webhost_left_img
-											img(src='/assets/pool.png', alt='')
-										.single_webhost_left_content
-											h3(style='color: aliceblue') Staking Guide
-											p This is Runebase's official Staking Guide, used to mint runes.
-											a.btn(href='https://docs.runebase.io') More
+			.container
+				.row.main_webhost_service_area.text-center
+					.col-md-6.no-padding
+						.single_webhost_left
+							.row
+								.col-md-8.offset-sm-2
+									.single_webhost_left_img
+										img(src='/assets/explorer.png', alt='')
+									.single_webhost_left_content
+										h3(style='color: aliceblue') Runebase Explorer
+										p
+											| Insight explorer makes it easy to track transactions on runebase chain.
+											| You can explorer blocks/addresses as well as publish transactions.
+										a.btn(href='https://explorer.runebase.io') More
+					.col-md-6.no-padding
+						.single_webhost_left
+							.row
+								.col-md-8.offset-sm-2
+									.single_webhost_left_img
+										img(src='/assets/pool.png', alt='')
+									.single_webhost_left_content
+										h3(style='color: aliceblue') Staking Guide
+										p This is Runebase's official Staking Guide, used to mint runes.
+										a.btn(href='https://docs.runebase.io') More
 		section#working.gtco-section.border-bottom(data-section='how-it-works')
 			.gtco-container
 				.row
@@ -266,44 +252,43 @@ html.no-js(lang='')
 										|  Learn more about Github
 		section#downloads.webhost_service
 			.container-fluid
-				.row
-					.main_webhost_service_area.text-center
-						.col-md-4.no-padding
-							.single_webhost_left
-								.row
-									.col-md-8.offset-sm-2
-										.single_webhost_left_img
-											img(src='/assets/windows.png', alt='')
-										.single_webhost_left_content
-											h3(style='color: aliceblue') Windows
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-win32-setup.exe', style='width: 300px;') 32-bit Runebase 0.16.0 - installer
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-win64-setup.exe', style='width: 300px;') 64-bit Runebase 0.16.0 - installer
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-win32.zip', style='width: 300px;') 32-bit Runebase 0.16.0 portable 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-win64.zip', style='width: 300px;') 64-bit Runebase 0.16.0 portable
-						.col-md-4.no-padding
-							.single_webhost_left(style='background-color: rgb(231, 143, 27)')
-								.row
-									.col-md-8.offset-sm-2
-										.single_webhost_left_img
-											img(src='/assets/linux.png', alt='')
-										.single_webhost_left_content
-											h3(style='color: aliceblue') Linux
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-x86_64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-x86_64.tar.gz 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-i686-pc-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-i686.tar.gz
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-aarch64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-aarch64.tar.gz 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-arm-linux-gnueabihf.tar.gz', style='width: 300px;') runebase-0.16.0-arm.tar.gz
-						.col-md-4.no-padding
-							.single_webhost_left(style='background-color:brown')
-								.row
-									.col-md-8.offset-sm-2
-										.single_webhost_left_img
-											img(src='/assets/mac.png', alt='')
-										.single_webhost_left_content
-											h3(style='color: aliceblue') MacOS
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-osx.dmg', style='width: 300px;') runebase-0.16.0-osx.dmg 
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-osx.tar.gz', style='width: 300px;') runebase-0.16.0-osx.tar.gz
-											a.btn(href='https://download.runebase.io/runebase-0.16.0-osx64.tar.gz', style='width: 300px;') runebase-0.16.0-osx64.tar.gz
-											a.btn(href='https://github.com/runebase/Runebase', style='width: 300px;') Runebase Source Code 
+				.row.main_webhost_service_area.text-center
+					.col-md-4.no-padding
+						.single_webhost_left
+							.row
+								.col-md-8.offset-sm-2
+									.single_webhost_left_img
+										img(src='/assets/windows.png', alt='')
+									.single_webhost_left_content
+										h3(style='color: aliceblue') Windows
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-win32-setup.exe', style='width: 300px;') 32-bit Runebase 0.16.0 - installer
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-win64-setup.exe', style='width: 300px;') 64-bit Runebase 0.16.0 - installer
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-win32.zip', style='width: 300px;') 32-bit Runebase 0.16.0 portable 
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-win64.zip', style='width: 300px;') 64-bit Runebase 0.16.0 portable
+					.col-md-4.no-padding
+						.single_webhost_left(style='background-color: rgb(231, 143, 27)')
+							.row
+								.col-md-8.offset-sm-2
+									.single_webhost_left_img
+										img(src='/assets/linux.png', alt='')
+									.single_webhost_left_content
+										h3(style='color: aliceblue') Linux
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-x86_64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-x86_64.tar.gz 
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-i686-pc-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-i686.tar.gz
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-aarch64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-aarch64.tar.gz 
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-arm-linux-gnueabihf.tar.gz', style='width: 300px;') runebase-0.16.0-arm.tar.gz
+					.col-md-4.no-padding
+						.single_webhost_left(style='background-color:brown')
+							.row
+								.col-md-8.offset-sm-2
+									.single_webhost_left_img
+										img(src='/assets/mac.png', alt='')
+									.single_webhost_left_content
+										h3(style='color: aliceblue') MacOS
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-osx.dmg', style='width: 300px;') runebase-0.16.0-osx.dmg 
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-osx.tar.gz', style='width: 300px;') runebase-0.16.0-osx.tar.gz
+										a.btn(href='https://download.runebase.io/runebase-0.16.0-osx64.tar.gz', style='width: 300px;') runebase-0.16.0-osx64.tar.gz
+										a.btn(href='https://github.com/runebase/Runebase', style='width: 300px;') Runebase Source Code 
 		section#faq.gtco-section(data-section='faq')
 			.gtco-container
 				.row
