@@ -224,7 +224,7 @@
 .ti-crown:before {
 	content: "\e642";
 }
-.ti-comments:before {
+.ti-commits:before {
 	content: "\e643";
 }
 .ti-comment:before {
@@ -905,7 +905,7 @@
 .ti-control-eject:before {
 	content: "\e725";
 }
-.ti-comments-smiley:before {
+.ti-commits-smiley:before {
 	content: "\e726";
 }
 .ti-brush-alt:before {
