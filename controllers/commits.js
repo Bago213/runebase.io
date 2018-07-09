@@ -7,7 +7,7 @@ router.get('/all', function(req, res) {
   Commits.all(function(err, docs) {
   	console.log(docs[0]["git"])
   	var git = docs[0]["git"]
-    res.render('commits', {commits: git})
+    res.render('commits', {commits: docs})
   })
 })
 

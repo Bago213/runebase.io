@@ -33,7 +33,8 @@ exports.insert = function(url, myobj, collection) {
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
     var dbo = db.db("runebase");
-    dbo.collection(collection).insertOne(myobj, function(err, res) {
+    console.log(myobj.git);
+    dbo.collection("commits").insertOne(myobj, function(err, res) {
       if (err) throw err;
       db.close();
     });

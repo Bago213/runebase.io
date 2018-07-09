@@ -12,4 +12,9 @@ html
       .sidebar
         block sidebar
     footer
-      p #{commits}
+      .p commits
+      each item in commits
+        li= item.git
+        li= item.url
+        li= item.message
+        li= item.author
