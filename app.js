@@ -1,41 +1,22 @@
-var MongoClient = require('mongodb').MongoClient
+require('./tools')();
 var url = "mongodb://localhost:27017/";
 var db = require('./db')
-var fs = require("fs");
-
 var express = require("express");
 var bodyParser  = require("body-parser");
 var webhook = require('express-github-webhook');
 var webhookHandler = webhook({ path: '/webhook', secret: '123456' });
 var app = express();
 
+
 app.engine('jade', require('jade').__express)
 app.set('view engine', 'jade')
 app.use(bodyParser.json());
 app.use(webhookHandler);
-
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("runebase");
-  dbo.createCollection("commits", function(err, res) {
-    if (err) throw err;
-    db.close();
-  });
-}); 
+db.createCollection(url, "commits")
 
 webhookHandler.on('push', function (repo, data) {
-  MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("runebase");
-    var myobj = { git: data["commits"][0]["id"], tree_id: data["commits"][0]["tree_id"], message: console.log(data["commits"][0]["message"]), url: data["commits"][0]["url"], author: data["commits"][0]["author"]["name"] };
-    dbo.collection("commits").insertOne(myobj, function(err, res) {
-      if (err) throw err;
-      db.close();
-    });
-  });
+savecommit(repo, data)
 });
-
-// app.use(express.static(__dirname + "/public")); //use static files in ROOT/public folder
 
 app.use('/assets', [
     express.static(__dirname + '/node_modules/jquery/dist/'),
