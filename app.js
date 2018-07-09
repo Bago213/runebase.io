@@ -1,4 +1,5 @@
 require('./tools')();
+var tools = require('./tools');
 var url = "mongodb://localhost:27017/";
 var db = require('./db')
 var express = require("express");
@@ -29,9 +30,11 @@ app.use('/assets', [
 app.use('/commits', commitsController);
 
 app.get('/', function (req, res) {
-  commitsModel.last(function(err, commits) {
-    console.log(commits)
+  last("commits", function(err, commits) {
+    last("issues", function(err, issues) {
+
     res.render('index', {commits: commits})
+  })
   })
 })
 
