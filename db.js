@@ -1,10 +1,11 @@
-var MongoClient = require('mongodb').MongoClient
 
+var MongoClient = require('mongodb').MongoClient
+var url = "mongodb://localhost:27017/";
 var state = {
   db: null,
 }
 
-exports.connect = function(url, done) {
+exports.connect = function(done) {
   if (state.db) return done()
 
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
@@ -18,7 +19,7 @@ exports.get = function() {
   return state.db
 }
 
-exports.createCollection = function(url, collection, done) {
+exports.createCollection = function(collection, done) {
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) return done(err)
     var dbo = db.db("runebase");
@@ -29,7 +30,7 @@ exports.createCollection = function(url, collection, done) {
   });
 }
 
-exports.insert = function(url, myobj, collection) {
+exports.insert = function(myobj, collection) {
   MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
     var dbo = db.db("runebase");

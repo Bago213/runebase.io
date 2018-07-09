@@ -1,5 +1,4 @@
 require('./tools')();
-var tools = require('./tools');
 var url = "mongodb://localhost:27017/";
 var db = require('./db')
 var express = require("express");
@@ -47,7 +46,7 @@ webhookHandler.on('issues', function (repo, data) {
 saveissue(repo, data)
 });
 
-db.connect(url, function(err) {
+db.connect(function(err) {
   if (err) {
     console.log('Unable to connect to Mongo.')
     process.exit(1)
