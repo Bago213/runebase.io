@@ -7,7 +7,7 @@ var state = {
 exports.connect = function(url, done) {
   if (state.db) return done()
 
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) return done(err)
     state.db = db.db("runebase")
     done()
@@ -19,7 +19,7 @@ exports.get = function() {
 }
 
 exports.createCollection = function(url, collection, done) {
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
     if (err) return done(err)
     var dbo = db.db("runebase");
     dbo.createCollection(collection, function(err, res) {
