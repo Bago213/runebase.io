@@ -6,6 +6,8 @@ var bodyParser  = require("body-parser");
 var webhook = require('express-github-webhook');
 var webhookHandler = webhook({ path: '/webhook', secret: '123456' });
 var app = express();
+var commitsController = require('./controllers/commits');
+var commitsModel = require('./models/commits');
 
 
 app.engine('jade', require('jade').__express)
@@ -24,9 +26,13 @@ app.use('/assets', [
     express.static(__dirname + '/public/images/'),
     express.static(__dirname + '/public/css/'),
 ]);
-app.use('/commits', require('./controllers/commits'));
+app.use('/commits', commitsController);
+
 app.get('/', function (req, res) {
-  res.render('index', {option: 'value'});
+  commitsModel.last(function(err, commits) {
+    console.log(commits)
+    res.render('index', {commits: commits})
+  })
 })
 
 
