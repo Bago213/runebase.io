@@ -34,7 +34,7 @@ exports.insert = function(url, myobj, collection) {
     if (err) throw err;
     var dbo = db.db("runebase");
     console.log(myobj.git);
-    dbo.collection("commits").insertOne(myobj, function(err, res) {
+    dbo.collection(collection).insertOne(myobj, function(err, res) {
       if (err) throw err;
       db.close();
     });
