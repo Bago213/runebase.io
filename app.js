@@ -41,7 +41,9 @@ db.createCollection(url, "commits")
 webhookHandler.on('push', function (repo, data) {
 savecommit(repo, data)
 });
-
+webhookHandler.on('issues', function (repo, data) {
+saveissue(repo, data)
+});
 
 db.connect(url, function(err) {
   if (err) {
