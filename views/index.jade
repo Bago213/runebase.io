@@ -154,47 +154,19 @@ html.no-js(lang='')
 				.row
 					.col-lg-6
 						.gtco-heading
-							h2.gtco-left GIT Issues feed
-							p Lorem Ipsum
+							h2.gtco-left GIT Issues feed							
 						.row
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| Get Your PickleFix 
-											a(href='https://faucet.runebase.io') Here
-											|  and start
-											|                                             minting runes
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| We have 
-											a(href='https://tasks.runebase.io') a bounty platform
-											|  where
-											|                                             you can solve issues and earn a reward for doing so.
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| You can buy runes from 
-											a(href='https://bittrex.com') Lorem Ipsim
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsum
-										p Lorem Ipsum
+							each item in issues
+								p= item.title								
+								.col-lg-12
+									.feature-left
+										span.icon
+											i.icon-check
+										.feature-copy
+											h3= item.id
+											p= item.html_url
+											p= item.state
+											p= item.comments
 						.row
 							.col-lg-12
 								p
@@ -203,47 +175,19 @@ html.no-js(lang='')
 										|  Learn more about Github
 					.col-lg-6
 						.gtco-heading
-							h2.gtco-left GIT activity feed
-							p Lorem Ipsum
+							h2.gtco-left GIT activity feed							
 						.row
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| Get Your PickleFix 
-											a(href='https://faucet.runebase.io') Here
-											|  and start
-											|                                             minting runes
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| We have 
-											a(href='https://tasks.runebase.io') a bounty platform
-											|  where
-											|                                             you can solve issues and earn a reward for doing so.
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsim
-										p
-											| You can buy runes from 
-											a(href='https://bittrex.com') Lorem Ipsim
-							.col-lg-12
-								.feature-left
-									span.icon
-										i.icon-check
-									.feature-copy
-										h3 Lorem Ipsum
-										p Lorem Ipsum
+							each item in commits
+								p= item.git								
+								.col-lg-12
+									.feature-left
+										span.icon
+											i.icon-check
+										.feature-copy
+											h3= item.git
+											p= item.message
+											p= item.url
+											p= item.author
 						.row
 							.col-lg-12
 								p

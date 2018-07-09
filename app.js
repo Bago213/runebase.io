@@ -13,6 +13,7 @@ var commitsModel = require('./models/commits');
 
 app.engine('jade', require('jade').__express)
 app.set('view engine', 'jade')
+
 app.use(bodyParser.json());
 app.use(webhookHandler);
 app.use('/assets', [
@@ -29,17 +30,15 @@ app.use('/assets', [
 ]);
 app.use('/commits', commitsController);
 
+
 app.get('/', function (req, res) {
   last("commits", function(err, commits) {
     last("issues", function(err, issues) {
-
-    res.render('index', {commits: commits})
+      //app.locals.issues = issues
+    res.render('index', {commits: commits, issues: issues})
   })
   })
 })
-
-
-db.createCollection(url, "commits")
 
 webhookHandler.on('push', function (repo, data) {
 savecommit(repo, data)
