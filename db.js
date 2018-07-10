@@ -1,6 +1,5 @@
-
+var config = require('./config');
 var MongoClient = require('mongodb').MongoClient
-var url = "mongodb://localhost:27017/";
 
 var state = {
   db: null,
@@ -9,7 +8,7 @@ var state = {
 exports.connect = function(done) {
   if (state.db) return done()
 
-  MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+  MongoClient.connect(config.db_host, { useNewUrlParser: true }, function(err, db) {
     if (err) return done(err)
     state.db = db.db("runebase")
     done()
@@ -21,7 +20,7 @@ exports.get = function() {
 }
 
 exports.createCollection = function(collection, done) {
-  MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+  MongoClient.connect(config.db_host, { useNewUrlParser: true }, function(err, db) {
     if (err) return done(err)
     var dbo = db.db("runebase");
     dbo.createCollection(collection, function(err, res) {
@@ -32,7 +31,7 @@ exports.createCollection = function(collection, done) {
 }
 
 exports.insert = function(myobj, collection) {
-  MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+  MongoClient.connect(config.db_host, { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
     var dbo = db.db("runebase");
     console.log(myobj.git);
