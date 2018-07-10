@@ -1,5 +1,4 @@
 require('./tools')();
-var url = "mongodb://localhost:27017/";
 var db = require('./db')
 var express = require("express");
 var bodyParser  = require("body-parser");
@@ -23,12 +22,16 @@ app.use('/assets', [
     express.static(__dirname + '/node_modules/bootstrap/dist/css/'),
     express.static(__dirname + '/node_modules/waypoints/lib/'),
     express.static(__dirname + '/node_modules/particles.js/'),
+    express.static(__dirname + '/node_modules/ng-table/bundles/'),
+    express.static(__dirname + '/node_modules/angular/'),
     express.static(__dirname + '/public/js/'),
     express.static(__dirname + '/public/images/'),
     express.static(__dirname + '/public/css/'),
 ]);
-app.use('/commits', commitsController);
-
+app.use('/api/commits', commitsController);
+app.get('/commits', function (req, res) {
+    res.render('commits');
+})
 
 app.get('/', function (req, res) {
   last("commits", function(err, commits) {

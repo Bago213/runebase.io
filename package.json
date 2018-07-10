@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/runebase/runebase-website#readme",
   "dependencies": {
+    "angular": "^1.7.2",
     "body-parser": "^1.18.3",
-    "popper.js":"^1.14.3",
     "bootstrap": "^4.1.1",
     "express": "^4.16.3",
     "express-github-webhook": "^1.0.6",
@@ -26,7 +26,12 @@
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "mongodb": "^3.1.1",
+    "ng-table": "^3.0.1",
     "particles.js": "^2.0.0",
+    "popper.js": "^1.14.3",
     "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }

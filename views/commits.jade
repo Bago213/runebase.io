@@ -1,20 +1,18 @@
-doctype
-html
+doctype html
+html(ng-app='tables')
   head
-    title #{title}
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    header
-      h1 Commits
-    .container
-      .main-content
-        block content
-      .sidebar
-        block sidebar
-    footer
-      .p commits
-      each item in commits
-        li= item.git
-        li= item.url
-        li= item.message
-        li= item.author
+    meta(charset='utf-8')
+    title Commits
+    link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='/assets/bootstrap.min.css')
+    script(src='/assets/angular.js')
+    link(rel='stylesheet', href='/assets/ng-table.css')
+    script(src='/assets/ng-table.js')
+    script(src='/assets/commits.js')
+  body(ng-controller='MainCtrl')
+    table.table(ng-table='tableParams', show-filter='true')
+      tr(ng-repeat='item in $data')
+        td(title="'Git ID'", filter="{ git: 'text'}", sortable="'git'") {{item.git}}
+        td(title="'Message'", filter="{ message: 'number'}", sortable="'message'") {{item.message}}
+        td(title="'Link'", filter="{ url: 'number'}", sortable="'url'") {{item.url}}
+        td(title="'Author'", filter="{ author: 'number'}", sortable="'author'") {{item.author}}
