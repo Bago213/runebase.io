@@ -39,9 +39,6 @@ router.use('/api/commits', commitsController);
 router.get('/commits', function (req, res) {
     res.render('commits');
 })
-router.get('/manage', function (req, res) {
-    res.render('manage');
-})
 
 router.get('/auth', passport.authenticate('github'));
 router.use('/assets', [
@@ -68,6 +65,14 @@ router.use(passport.initialize());
 router.use(passport.session());
 router.use(bodyParser.json());
 
+
+router.get('/manage', function (req, res) {
+    var auth = "";
+    if (req.isAuthenticated()) {
+        auth += JSON.stringify(req.user, null, 4);
+    }
+    res.render('manage', {auth: auth});
+})
 
 // auth will call this URL
 router.get('/auth/github',
