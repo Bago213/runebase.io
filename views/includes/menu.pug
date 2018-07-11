@@ -12,21 +12,16 @@ header#main_menu.header.fixed-top
 				#bs-example-navbar-collapse-1.collapse.navbar-collapse
 					ul.nav.navbar-nav.ml-auto
 						li.nav-item
-							a.showpointer.nav-link(href='/#about') About
+							a.showpointer.nav-link(href='/#about') About						
 						li.nav-item
-							a.showpointer.nav-link(href='/manage') Manage
-						li.nav-item
-							a.showpointer.nav-link(href='#services') Services
-						li.nav-item
-							a.nav-link(href='#downloads') Downloads
+							a.showpointer.nav-link(href='/#services') Services
 						li.nav-item
 							a.nav-link(href='#faq') Docs
+						li.nav-item
+							a.nav-link(href='/#downloads') Downloads						
+						li.nav-item
+							a.showpointer.nav-link(href='/manage') Manage
 		.col-sm-2
-			.div.auth
-				ul.float-left
-					li
-						a(href='/auth') GitHub
-					li
-						a(href='/logout') logout
+			.row.auth
 			script.
 				var auth =!{auth}
