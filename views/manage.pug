@@ -4,11 +4,8 @@ html(ng-app='tables')
     meta(charset='utf-8')
     title Manage
     link(rel='stylesheet', href='style.css')
-    link(rel='stylesheet', href='/assets/bootstrap.min.css')
-    script(src='/assets/angular.js')
-    link(rel='stylesheet', href='/assets/ng-table.css')
-    script(src='/assets/ng-table.js')
-    script(src='/assets/commits.js')
+    link(rel='stylesheet', href='/assets/bootstrap.min.css')    
+    link(rel='stylesheet', href='/assets/ng-table.css')    
     link(rel='shortcut icon', type='image/png', href='/assets/runebase.png')
     link(rel='stylesheet', href='/assets/bootstrap.min.css')
     link(rel='stylesheet', href='../assets/style.css')
@@ -23,6 +20,9 @@ html(ng-app='tables')
           td(title="'Message'", filter="{ message: 'text'}", sortable="'message'") {{item.message}}
           td(title="'Link'", filter="{ url: 'text'}", sortable="'url'") {{item.url}}
           td(title="'Author'", filter="{ author: 'text'}", sortable="'author'") {{item.author}}
+    script(src='/assets/angular.js')
+    script(src='/assets/ng-table.js')
+    script(src='/assets/angular.custom.manage.js')
     script(src='/assets/jquery.min.js')
     script(src='/assets/jquery.easing.min.js')
     script(src='/assets/bootstrap.min.js')

@@ -1,14 +1,5 @@
 doctype html
-//if lt IE 7
-	html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='')
-//if IE 7
-	html.no-js.lt-ie9.lt-ie8(lang='')
-//if IE 8
-	html.no-js.lt-ie9(lang='')
-//if gt IE 8
-	| [if gt IE 8]
-html.no-js(lang='')
-	// <![endif]
+html(ng-app='tables')
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
@@ -18,15 +9,7 @@ html.no-js(lang='')
 		link(rel='shortcut icon', type='image/png', href='/assets/runebase.png')
 		link(rel='stylesheet', href='/assets/bootstrap.min.css')
 		link(rel='stylesheet', href='../assets/style.css')
-	body(data-spy='scroll', data-target='#navmenu')
-		//if lt IE 8
-			p.browserupgrade
-				| You are using n 
-				strong outdated
-				|  browser. Please 
-				a(href='http://browsehappy.com/') upgrade your browser
-				|  to
-				|                 improve your experience.
+	body(ng-controller='MainCtrl', data-spy='scroll', data-target='#navmenu')
 		include includes/menu.pug
 
 		section#home.home
@@ -134,49 +117,24 @@ html.no-js(lang='')
 										a.btn(href='https://docs.runebase.io') More
 		section#working.gtco-section.border-bottom(data-section='how-it-works')
 			.gtco-container
+				.gtco-heading
+					h2.gtco-left GIT Issues feed
 				.row
-					.col-lg-6
-						.gtco-heading
-							h2.gtco-left GIT Issues feed							
-						.row
-							each item in issues
-								p= item.title								
-								.col-lg-12
-									.feature-left
-										span.icon
-											i.icon-check
-										.feature-copy
-											h3= item.id
-											p= item.html_url
-											p= item.state
-											p= item.comments
-						.row
-							.col-lg-12
-								p
-									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
-										i.icon-apple
-										|  Learn more about Github
-					.col-lg-6
-						.gtco-heading
-							h2.gtco-left GIT activity feed							
-						.row
-							each item in commits
-								p= item.git								
-								.col-lg-12
-									.feature-left
-										span.icon
-											i.icon-check
-										.feature-copy
-											h3= item.git
-											p= item.message
-											p= item.url
-											p= item.author
-						.row
-							.col-lg-12
-								p
-									a.btn.btn-success.btn-lg.btn-block(href='https://www.berymedia.com')
-										i.icon-apple
-										|  Learn more about Github
+					table.table(ng-table='tableParams', show-filter='true')
+						tr(ng-repeat='item in $data')
+							td(title="'Git ID'") {{item.git}}
+							td(title="'Message'") {{item.message}}
+							td(title="'Link'") {{item.url}}
+							td(title="'Author'") {{item.author}}
+				.gtco-heading
+					h2.gtco-left GIT activity feed
+				.row
+					table.table(ng-table='tableParams')
+						tr(ng-repeat='item in $data')
+							td(title="'Git ID'") {{item.git}}
+							td(title="'Message'") {{item.message}}
+							td(title="'Link'") {{item.url}}
+							td(title="'Author'") {{item.author}}
 		section#downloads.webhost_service
 			.container-fluid
 				.row.main_webhost_service_area.text-center
@@ -329,7 +287,9 @@ html.no-js(lang='')
 				i.fa.fa-chevron-up
 
 
-
+			script(src='/assets/angular.js')
+			script(src='/assets/ng-table.js')
+			script(src='/assets/angular.custom.index.js')
 			script(src='/assets/jquery.min.js')
 			script(src='/assets/jquery.easing.min.js')
 			script(src='/assets/bootstrap.min.js')
