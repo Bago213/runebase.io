@@ -13,6 +13,6 @@ html(ng-app='tables')
     table.table(ng-table='tableParams', show-filter='true')
       tr(ng-repeat='item in $data')
         td(title="'Git ID'", filter="{ git: 'text'}", sortable="'git'") {{item.git}}
-        td(title="'Message'", filter="{ message: 'number'}", sortable="'message'") {{item.message}}
-        td(title="'Link'", filter="{ url: 'number'}", sortable="'url'") {{item.url}}
-        td(title="'Author'", filter="{ author: 'number'}", sortable="'author'") {{item.author}}
+        td(title="'Message'", filter="{ message: 'text'}", sortable="'message'") {{item.message}}
+        td(title="'Link'", filter="{ url: 'text'}", sortable="'url'") {{item.url}}
+        td(title="'Author'", filter="{ author: 'text'}", sortable="'author'") {{item.author}}

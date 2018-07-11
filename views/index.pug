@@ -21,32 +21,46 @@ html.no-js(lang='')
 	body(data-spy='scroll', data-target='#navmenu')
 		//if lt IE 8
 			p.browserupgrade
-				| You are using an 
+				| You are using n 
 				strong outdated
 				|  browser. Please 
 				a(href='http://browsehappy.com/') upgrade your browser
 				|  to
 				|                 improve your experience.
 		header#main_menu.header.fixed-top
-			.container
-				nav.navbar.navbar-light.bg-light.navbar-expand-md(id='#navmenu')
-					button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-						span.sr-only Toggle navigation
-						| ☰
-					a.navbar-brand(href='#')
-						img(src='/assets/logo.png')
-					#bs-example-navbar-collapse-1.collapse.navbar-collapse
-						ul.nav.navbar-nav.ml-auto
-							li.nav-item
-								a.showpointer.nav-link(href='#about') About
-							li.nav-item
-								a.showpointer.nav-link(href='#feature') Community
-							li.nav-item
-								a.showpointer.nav-link(href='#services') Services
-							li.nav-item
-								a.nav-link(href='#downloads') Downloads
-							li.nav-item
-								a.nav-link(href='#faq') Docs
+			.row
+				.col-sm-2.float-left
+					Sidebar content
+				.col-sm-8
+					nav.navbar.navbar-light.bg-light.navbar-expand-md(id='#navmenu')
+						button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+							span.sr-only Toggle navigation
+							| ☰
+						a.navbar-brand(href='#')
+							img(src='/assets/logo.png')
+						#bs-example-navbar-collapse-1.collapse.navbar-collapse
+							ul.nav.navbar-nav.ml-auto
+								li.nav-item
+									a.showpointer.nav-link(href='#about') About
+								li.nav-item
+									a.showpointer.nav-link(href='#feature') Community
+								li.nav-item
+									a.showpointer.nav-link(href='#services') Services
+								li.nav-item
+									a.nav-link(href='#downloads') Downloads
+								li.nav-item
+									a.nav-link(href='#faq') Docs
+				.col-sm-2
+					.div.auth
+						ul.float-left
+							li
+								a(href='/auth') GitHub
+							li
+								a(href='/logout') logout
+					script.
+						var auth =!{auth} 
+
+
 		section#home.home
 			div(style='position: relative;')
 				// particles.js container
@@ -60,11 +74,7 @@ html.no-js(lang='')
 									.single_slider
 										h3 Lorem Ipsum
 										p Put a Pickle on that Rustler
-										ul
-											li
-												a(href='/auth') GitHub
-											li
-												a(href='/logout') logout
+
 
 									.col-md-6.offset-sm-3.nopointer
 										.single_slider_img_icon.nopointer
@@ -359,3 +369,4 @@ html.no-js(lang='')
 			script(src='/assets/jquery.waypoints.min.js')
 			script(src='/assets/particles.js')
 			script(src='/assets/custom.js')
+			script(src='/assets/auth.js')

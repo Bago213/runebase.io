@@ -4,13 +4,11 @@ var config = require('./config');
 var express = require("express");
 var bodyParser  = require("body-parser");
 var webhook = require('express-github-webhook');
-var webhookHandler = webhook({ path: '/webhook', secret: '123456' });
+var webhookHandler = webhook({ path: '/webhook', secret: config.webhook_secret });
 var app = express();
 var passport = require('passport');
 var GithubStrategy = require('passport-github').Strategy;
 var session = require('express-session');
-var commitsModel = require('./models/commits');
-
 
 passport.use(new GithubStrategy({
     clientID: config.github_client_id,
@@ -52,8 +50,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.json());
 app.use(webhookHandler);
-
-
 
 // auth will call this URL
 app.get('/auth/github',
