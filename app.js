@@ -39,8 +39,8 @@ function ensureAuthenticated(req, res, next) {
   res.redirect('/')
 }
 
-app.engine('jade', require('jade').__express)
-app.set('view engine', 'jade')
+app.engine('pug', require('pug').__express)
+app.set('view engine', 'pug')
 app.use(require('./routes'))
 app.use(session({
     secret: config.session_secret,

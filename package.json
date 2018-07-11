@@ -1,5 +1,5 @@
 {
-  "name": "runebase-website",
+  "name": "runebase.io",
   "version": "0.0.1",
   "description": "Website for Runebase",
   "main": "app.js",
@@ -28,10 +28,10 @@
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "mongodb": "^3.1.1",
-    "mongoose": "^5.2.2",
     "ng-table": "^3.0.1",
     "particles.js": "^2.0.0",
     "popper.js": "^1.14.3",
+    "pug": "^2.0.3",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
