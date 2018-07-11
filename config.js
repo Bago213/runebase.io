@@ -1,5 +1,5 @@
 var config = {};
-config.host = 'http://80.241.211.26:3000/'
+config.host = 'http://runebase.io/'
 config.db_host = 'mongodb://localhost:27017/';
 config.github_client_id = "123456";
 config.github_client_secret = "123456";
