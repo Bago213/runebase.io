@@ -607,3 +607,7 @@ body{
 .showpointer{
      pointer-events: all;
 }
+.customh60{
+  width: 100%;
+  height: 60px;
+}

@@ -8,6 +8,9 @@ router.use('/api/commits', commitsController);
 router.get('/commits', function (req, res) {
     res.render('commits');
 })
+router.get('/manage', function (req, res) {
+    res.render('manage');
+})
 router.get('/auth', passport.authenticate('github'));
 router.use('/assets', [
     express.static(__dirname + '/node_modules/jquery/dist/'),
