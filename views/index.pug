@@ -11,15 +11,13 @@ html(ng-app='tables')
 		link(rel='stylesheet', href='../assets/style.css')
 	body(ng-controller='MainCtrl', data-spy='scroll', data-target='#navmenu')
 		include includes/menu.pug
-
 		section#home.home
 			div(style='position: relative;')
 				// particles.js container
 				#particles-js
 					img.nopointer(style='position: absolute; bottom:0px; ', src='/assets/mountain.png', alt='')
 				.home_overlay
-					.container
-						.row.nopointer
+						.nopointer
 							.main_slider_area.col-md-8.offset-sm-2
 								.slider
 									.single_slider
@@ -34,12 +32,9 @@ html(ng-app='tables')
 												i.fa.fa-download
 												| Runebase-$OSVERSION-0.16.0
 		section#about.webhost_service
-			.container-fluid
-				.row
 					.main_webhost_service_area.text-center
 						.col-xl-12.no-padding
 							.single_webhost_left(style='background-color: #000002')
-								.row
 									.col-md-8.offset-sm-2
 										.single_webhost_left_content
 											h3(style='color: aliceblue') Community?
@@ -116,7 +111,6 @@ html(ng-app='tables')
 			.gtco-container
 				.gtco-heading
 					h2.gtco-left GIT Issues feed
-				.row
 					table.table(ng-table='tableParams', show-filter='true')
 						tr(ng-repeat='item in $data')
 							td(title="'Git ID'") {{item.git}}
@@ -125,20 +119,16 @@ html(ng-app='tables')
 							td(title="'Author'") {{item.author}}
 				.gtco-heading
 					h2.gtco-left GIT activity feed
-				.row
 					table.table(ng-table='tableParams')
 						tr(ng-repeat='item in $data')
 							td(title="'Git ID'") {{item.git}}
 							td(title="'Message'") {{item.message}}
 							td(title="'Link'") {{item.url}}
 							td(title="'Author'") {{item.author}}
-		section#downloads.webhost_service
-			.container-fluid
-				.row.main_webhost_service_area.text-center
-					.col-md-4.no-padding
-						.single_webhost_left
-							.row
-								.col-md-8.offset-sm-2
+		section
+			.container
+					.col-md-4
+								.col-md-8
 									.single_webhost_left_img
 										img(src='/assets/windows.png', alt='')
 									.single_webhost_left_content
@@ -147,10 +137,8 @@ html(ng-app='tables')
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-win64-setup.exe', style='width: 300px;') 64-bit Runebase 0.16.0 - installer
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-win32.zip', style='width: 300px;') 32-bit Runebase 0.16.0 portable 
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-win64.zip', style='width: 300px;') 64-bit Runebase 0.16.0 portable
-					.col-md-4.no-padding
-						.single_webhost_left(style='background-color: rgb(231, 143, 27)')
-							.row
-								.col-md-8.offset-sm-2
+					.col-md-4
+								.col-md-8
 									.single_webhost_left_img
 										img(src='/assets/linux.png', alt='')
 									.single_webhost_left_content
@@ -159,10 +147,8 @@ html(ng-app='tables')
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-i686-pc-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-i686.tar.gz
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-aarch64-linux-gnu.tar.gz', style='width: 300px;') runebase-0.16.0-aarch64.tar.gz 
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-arm-linux-gnueabihf.tar.gz', style='width: 300px;') runebase-0.16.0-arm.tar.gz
-					.col-md-4.no-padding
-						.single_webhost_left(style='background-color:brown')
-							.row
-								.col-md-8.offset-sm-2
+					.col-md-4
+								.col-md-8
 									.single_webhost_left_img
 										img(src='/assets/mac.png', alt='')
 									.single_webhost_left_content
@@ -171,90 +157,8 @@ html(ng-app='tables')
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-osx.tar.gz', style='width: 300px;') runebase-0.16.0-osx.tar.gz
 										a.btn(href='https://download.runebase.io/runebase-0.16.0-osx64.tar.gz', style='width: 300px;') runebase-0.16.0-osx64.tar.gz
 										a.btn(href='https://github.com/runebase/Runebase', style='width: 300px;') Runebase Source Code 
-		section#faq.gtco-section(data-section='faq')
-			.gtco-container
-				.row
-					.col-lg-8.offset-md-2.text-center.gtco-heading
-						h2 Loren Ipsum?
-						p Here are some most frequently Lorem Ipsum questions.
-				.row
-					.col-lg-6
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 Community?
-							.gtco-accordion-content
-								.inner
-									p
-										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-										| ullamcorper lorem. Sed turpis mi, sodales a odio quis, maximus posuere
-										| magna. Quisque ex odio, tempus id porta id, molestie sed velit. Duis nisi
-										| quam, convallis sit amet arcu at, gravida consectetur dolor. Donec nec
-										| aliquam mi. Morbi vitae ipsum sit amet eros feugiat convallis a vitae mauris.
-										| Suspendisse potenti. Aenean ullamcorper sem quis diam pellentesque, sed
-										| aliquam nisi facilisis. Pellentesque pellentesque, mi non dictum varius,
-										| leo eros vehicula purus, ac tempor purus justo quis mi. Proin non condimentum
-										| enim. Phasellus et lacinia orci, vulputate ullamcorper dui. Donec ac justo
-										| ultricies, sollicitudin metus rutrum, feugiat purus. Duis vehicula ex eu
-										| massa congue vulputate. Donec justo metus, eleifend ut congue ut, sollicitudin
-										| vitae lacus. Praesent luctus leo urna, eget dictum tellus ultricies a.
-										| Curabitur a sapien nibh.
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 How much is the fish?
-							.gtco-accordion-content
-								.inner
-									p
-										| Mauris fermentum nisi sem. Morbi ut purus hendrerit, imperdiet magna nec,
-										| varius urna. Donec hendrerit a sem eu viverra. In tincidunt enim in turpis
-										| mattis, ultricies sodales ex volutpat. Vestibulum non purus lacus. Etiam
-										| eu neque dui. Nullam vitae velit elit. Nullam urna erat, feugiat vitae
-										| lacus vel, dictum euismod lorem. Mauris ultricies nec erat eu convallis.
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 Lorem Ipsum?
-							.gtco-accordion-content
-								.inner
-									p Lorem Ipsum
-					.col-lg-6
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 Lorem Ipsum?
-							.gtco-accordion-content
-								.inner
-									p Lorum Ipsum
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 Lorem Ipsum?
-							.gtco-accordion-content
-								.inner
-									p Yes. Lorem Ipsum
-						.gtco-accordion
-							.gtco-accordion-heading
-								.icon
-									i.icon-cross
-								h3 I have more Lorum Ipsum?
-							.gtco-accordion-content
-								.inner
-									p
-										| Sed fringilla, neque ac bibendum aliquet, arcu leo suscipit sapien, non
-										| scelerisque tellus nisi vitae mauris. Integer a ligula leo. Etiam eget
-										| leo et ligula fringilla bibendum eget id diam. Curabitur dolor odio, facilisis
-										| mattis fermentum nec, venenatis quis tortor. Duis finibus pretium dictum.
-										| Curabitur pulvinar auctor finibus. Nullam rutrum ligula eu neque ornare
-										| blandit. Nulla maximus dui lectus. Praesent eleifend eu odio eu varius..
 		section#contact.contact
 			.container
-				.row
 					.main_contact
 						.contactwithmap_content
 							.contact_overlay

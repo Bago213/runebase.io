@@ -183,8 +183,6 @@ h2, h3 {
   border-color: #4cae4c !important;
 }
 
-/* Owl Override Style */
-
 .gtco-accordion {
   position: relative;
   background: #fff;
@@ -222,18 +220,6 @@ h2, h3 {
   padding: 20px;
 }
 
-/*# sourceMappingURL=style.css.map */
-
-
-
-
-/*
-Author: XpeedStudio
-Author URI: http://themeforest.net/user/XpeedStudio/portfolio
-*/
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 html,
 body {
     background-color: #ecedee;
@@ -246,9 +232,6 @@ body {
     font-family: 'roboto', sans-serif;
     font-weight: 300;
 }
-/*==========================================
-PRE LOADER 
-==========================================*/
 
 img {
     -moz-user-select: none;
@@ -362,44 +345,7 @@ Button
     text-decoration: none;
     border: 1px solid #fff;
 }
-/*.btn-default:active, .btn-default:hover  {
-    background: transparent;
-}*/
 
-
-/*
-Extra height css
-*/
-/*padding*/
-
-/*for placeholder changes*/
-
-/*input::-webkit-input-placeholder {
-  color: #CACACA;
-  font-size: 18px;
-}
-input::-moz-placeholder {
-  color: #CACACA;
-  font-size: 18px;
-}
-input:-ms-input-placeholder {
-  color: #CACACA;
-  font-size: 18px;
-}*/
-
-/*for image bg*/
-
-
-/*.img-bg{
-  background: url(../images/home-msg.jpg) no-repeat center top fixed;
-  background-size
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  overflow: hidden;
-}*/
 /* navbar section */
 .navbar-brand>img {
     max-width: 80%;
@@ -436,48 +382,11 @@ input:-ms-input-placeholder {
 }
 
 
-
-/*.single_slider{
-    overflow: hidden; 
-        text-align:center;
-        padding:300px 0px;
-}
-.carousel-control.left {
-    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
-    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
-    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0) 0,rgba(0,0,0,.0001) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-    background-repeat: repeat-x;
-        left: 40%;
-        margin-top: 10%;
-}
-
-.carousel-control.right {
-    right: 40%;
-    left: auto;
-    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
-    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
-    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
-    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0, 0, 0, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-    background-repeat: repeat-x;
-        margin-top: 10%;
-}*/
-
 .main_slider_area{
     padding: 250px 0px;
     text-align: center;
 }
 
-/* webhost_service section */
-.webhost_service{
-
-}
-.main_webhost_service_area{
-    color:#fff;
-    overflow: hidden;
-}
 
 .main_webhost_service_area .single_webhost_left{
     background: #012;
@@ -610,4 +519,14 @@ body{
 .customh60{
   width: 100%;
   height: 60px;
+}
+.greybg{
+  background-color:#ccc;
+}
+.col-md-8 {
+   -moz-hyphens:auto;
+   -ms-hyphens:auto;
+   -webkit-hyphens:auto;
+   hyphens:auto;
+   word-wrap:break-word;
 }
