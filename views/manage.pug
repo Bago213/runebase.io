@@ -11,7 +11,7 @@ html(ng-app='tables')
     link(rel='stylesheet', href='../assets/style.css')
   body(ng-controller='MainCtrl', data-target='#navmenu')
   include includes/menu.pug
-  .cointainer
+  section
     .row.customh60
     .row    
       table.table(ng-table='tableParams', show-filter='true')
@@ -20,6 +20,7 @@ html(ng-app='tables')
           td(title="'Message'", filter="{ message: 'text'}", sortable="'message'") {{item.message}}
           td(title="'Link'", filter="{ url: 'text'}", sortable="'url'") {{item.url}}
           td(title="'Author'", filter="{ author: 'text'}", sortable="'author'") {{item.author}}
+  include includes/foot.pug
     script(src='/assets/angular.js')
     script(src='/assets/ng-table.js')
     script(src='/assets/angular.custom.manage.js')
