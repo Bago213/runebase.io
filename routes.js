@@ -6,7 +6,6 @@ var session = require('express-session');
 var commitsController = require('./controllers/commits');
 var router = express.Router();
 
-
 router.use(session({
     secret: config.session_secret,
     name: "runebase",
@@ -59,13 +58,9 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-router.get('/', function (req, res) {
-  last("commits", function(err, commits) {
-    last("issues", function(err, issues) {   
+router.get('/', function (req, res) { 
     auth = JSON.stringify(req.user, null, 4);
-    res.render('index', {commits: commits, issues: issues, auth: auth})
-  })
-  })
+    res.render('index', {auth: auth})
 });
 
 module.exports = router;
