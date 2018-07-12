@@ -5,6 +5,7 @@ var express = require('express');
 var session = require('express-session');
 var commitsController = require('./controllers/commits');
 var router = express.Router();
+var useragent = require('./helpers/useragent').os;
 
 router.use(session({
     secret: config.session_secret,
@@ -37,7 +38,11 @@ router.use('/assets', [
     express.static(__dirname + '/public/css/'),
 ]);
 
+router.use(useragent);
+
 router.get('/manage', function (req, res) {
+
+    console.log(res.os);
     auth = JSON.stringify(req.user, null, 4);
     res.render('manage', {auth: auth});
 });
@@ -58,9 +63,10 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-router.get('/', function (req, res) { 
+router.get('/', function (req, res) {
+    console.log(res.os); 
     auth = JSON.stringify(req.user, null, 4);
-    res.render('index', {auth: auth})
+    res.render('index', {auth: auth, os: res.os})
 });
 
 module.exports = router;
