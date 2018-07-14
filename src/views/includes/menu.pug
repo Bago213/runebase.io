@@ -1,0 +1,27 @@
+header#main_menu.header.fixed-top
+	.row.bg-light
+		.col-sm-2.float-left
+			Sidebar
+		.col-sm-8
+			nav.navbar.navbar-light.navbar-expand-md(id='#navmenu')
+				button.navbar-toggler.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+					span.sr-only Toggle navigation
+					| ☰
+				a.navbar-brand(href='/')
+					img(src='/assets/logo.png')
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.ml-auto
+						li.nav-item
+							a.showpointer.nav-link(href='/wallet') Wallet						
+						li.nav-item
+							a.showpointer.nav-link(href='/#services') Services
+						li.nav-item
+							a.nav-link(href='#faq') Docs
+						li.nav-item
+							a.nav-link(href='/#downloads') Downloads						
+						li.nav-item
+							a.showpointer.nav-link(href='/manage') Manage
+		.col-sm-2
+			.row.auth
+			script.
+				var auth =!{auth}

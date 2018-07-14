@@ -1,0 +1,25 @@
+html
+  head
+    meta(charset='utf-8')
+    title Manage
+    script(src='/assets/jquery.min.js')
+    script(src='/assets/jquery.easing.min.js')
+    script(src='/assets/bootstrap.min.js')
+    script(src='/assets/jquery.waypoints.min.js')
+    link(rel='stylesheet', href='/assets/bootstrap.min.css')
+    link(rel='stylesheet', href='/assets/ng-table.css') 
+    link(rel='shortcut icon', type='image/png', href='/assets/runebase.png')
+    link(rel='stylesheet', href='/assets/bootstrap.min.css')    
+    link(rel='stylesheet', href='/assets/material-icons.css')
+    link(rel='stylesheet', href='/assets/runebase-icons.less') 
+    script(src="assets/vuetify.min.js")
+    link(rel='stylesheet', href='/assets/vuetify.min.css')
+    link(rel='stylesheet', href='../assets/style.css')
+  body(ng-controller='MainCtrl', data-target='#navmenu')
+  include includes/menu.pug
+  section
+    .row.customh60
+    #app
+      block content
+        wallet
+    script(src="assets/bundle.js")
