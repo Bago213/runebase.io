@@ -37,7 +37,8 @@
     "vue": "^2.5.16",
     "vue-clipboard2": "0.0.6",
     "vueify": "^9.4.1",
-    "vuetify": "^0.16.9"
+    "vuetify": "^0.16.9",
+    "watchify": "^3.11.0"
   },
   "devDependencies": {
     "browserify-hmr": "^0.3.6",
@@ -62,7 +63,7 @@
     "store": "^2.0.12",
     "vue-i18n": "^7.6.0",
     "vue-loader": "^13.7.1",
-    "vue-style-loader": "^3.1.2",    
+    "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^2.6.1"
   },
