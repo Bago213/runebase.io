@@ -1,9 +1,14 @@
 # runebase.io
 
-## Install
-Mongodb
+## NVM
 ```
-to be removed
+docs
+
+```
+## Nodejs
+```
+nvm i v6
+nvm use v6
 
 ```
 ### Base Install
