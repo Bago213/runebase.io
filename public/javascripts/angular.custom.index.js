@@ -8,7 +8,7 @@ app.controller('MainCtrl', function($scope, NgTableParams, $http) {
             return $scope.result;
     }
 
-    $scope.getData("/api/commits/last").then(function(data) {
+    $scope.getData("https://api.github.com/orgs/runebase/issues").then(function(data) {
         console.log(data);
         $scope.tableParams = new NgTableParams({count: data.length}, {counts: [], dataset: data});        
     });
