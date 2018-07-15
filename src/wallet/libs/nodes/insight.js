@@ -4,13 +4,13 @@ import config from '../config.js'
 let domain = ''
 switch (config.getNetwork()) {
   case 'testnet':
-    domain = 'https://testnet-explorer.runebase.io'
+    domain = 'https://testnet-explorer.runebase.io/'
     break
   case 'mainnet':
-    domain = 'https://explorer.runebase.io'
+    domain = 'https://explorer.runebase.io/'
     break
 }
-const apiPrefix = domain + '/runebase-insight-api'
+const apiPrefix = domain + 'runebase-insight-api'
 
 const _get = async url => {
   return (await axios.get(apiPrefix + url)).data

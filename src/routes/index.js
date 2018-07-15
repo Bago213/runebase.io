@@ -3,7 +3,6 @@ var auth = require('../helpers/auth');
 var bodyParser  = require("body-parser");
 var express = require('express');
 var session = require('express-session');
-var commitsController = require('../controllers/commits');
 var useragent = require('../helpers/useragent').os;
 var router = express.Router();
 
@@ -17,7 +16,6 @@ router.use(auth.initialize());
 router.use(auth.session());
 router.use(bodyParser.json());
 router.use(useragent);
-router.use('/api/commits', commitsController);
 
 
 router.get('/commits', function (req, res) {
