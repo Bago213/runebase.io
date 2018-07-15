@@ -530,3 +530,10 @@ body{
    hyphens:auto;
    word-wrap:break-word;
 }
+
+.layout{
+  height: unset !important;
+}
+.container.fill-height{
+  align-items: unset !important;
+}    
