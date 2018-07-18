@@ -533,7 +533,14 @@ body{
 
 .layout{
   height: unset !important;
+} 
+.wallets{
+    background: #ccc;
 }
-.container.fill-height{
-  align-items: unset !important;
-}    
+.center-submenu{
+  text-align: center;
+  width: 100%;
+}
+body {
+  background: #ccc;
+}
