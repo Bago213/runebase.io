@@ -5,8 +5,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var webhook = require('express-github-webhook');
-var webhookHandler = webhook({ path: '/webhook', secret: config.webhook_secret });
 var index = require('./routes/index');
 var manager = require('./routes/manager');
 
@@ -24,7 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(webhookHandler);
 app.use('/', index);
 app.use('/manager', manager);
 app.use('/assets', [
@@ -61,14 +58,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-webhookHandler.on('push', function (repo, data) {
-    savecommit(repo, data);
-});
-
-webhookHandler.on('issues', function (repo, data) {
-    saveissue(repo, data);
 });
 
 module.exports = app;
