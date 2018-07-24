@@ -3,7 +3,9 @@ particlesJS("particles-js", {"particles":{"number":{"value":120,"density":{"enab
             
 $(".wallet").click(function(e) {
       e.preventDefault();
-      $('.wallet-cat .selection').fadeOut('slow');
+      $('.wallet.active').removeClass('active')
+      $(this).addClass('active');
+      $('.wallet-cat .selection').fadeOut(0);
       $('#' + $(this).data('rel')).removeClass('d-none');
-      $('#' + $(this).data('rel')).fadeIn('slow');
+      $('#' + $(this).data('rel')).fadeIn(0);
 });

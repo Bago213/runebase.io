@@ -365,20 +365,17 @@ Button
     background:rgba(228, 70, 70, 0.2);
 }
 
-.slider .single_slider h3{
+.single_slider h3{
     color:#fff;
     font-size:3rem;
     font-family: 'sanchezregular';
     margin-bottom:0;
 }
-.slider .single_slider p{
+.single_slider p{
     font-size:1.875rem;
     color:#fff;
     font-family: 'ralewaylight';
     margin-bottom:40px;
-}
-.slider .single_slider_img_icon{
-    margin-bottom:0;
 }
 
 
@@ -388,23 +385,6 @@ Button
 }
 
 
-.main_webhost_service_area .single_webhost_left{
-    background: #012;
-    padding-top:115px;
-    padding-bottom: 110px;
-
-}
-.main_webhost_service_area .single_webhost_left_img img{
-    max-width: 178px;
-    max-height: 178px;
-}
-.main_webhost_service_area .single_webhost_left_content{
-    margin-top:50px
-}
-.main_webhost_service_area .single_webhost_left_content p{
-    font-size:1rem;
-    font-family: 'ralewayregular';
-}
 
 
 /*our features section*/ 
@@ -544,3 +524,29 @@ body{
 body {
   background: #ccc;
 }
+
+.walletstyle{
+    border: 2px solid #4CAF50;    
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.walletstyle:hover, .walletstyle.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navigation-drawer, .toolbar--fixed{
+  position: absolute;
+}
+#app{
+  position: relative;
+}
+

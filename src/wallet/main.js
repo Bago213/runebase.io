@@ -8,4 +8,4 @@ Vue.component("wallet", require("./wallet.vue"));
 Vue.use(Vuetify);
 Vue.use(VueClipboard);
 
-new Vue({el: "#App", render: h => h(App)}).$mount('#app');
+new Vue({el: "#app", render: h => h(App)}).$mount('#app');
