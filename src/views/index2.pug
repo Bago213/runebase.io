@@ -30,7 +30,7 @@ html(ng-app='tables')
 									a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
 										i.fa.fa-download
 										| Runebase-#{os}-0.15.1.#{ext}
-		section#about.webhost_service(style='background-color: #000002')
+		section#about.anouncements(style='background-color: #000002')
 					.py-5.text-center
 						.col-xl-12.no-padding
 							.single_webhost_left(style='background-color: #000002')
@@ -38,9 +38,9 @@ html(ng-app='tables')
 										.single_webhost_left_content
 											h3.gtco-left(style='color: aliceblue') Anouncements
 											table.table(ng-table='tableParams')
-												tr(ng-repeat='item in $data')
-													td(title="'ID'") {{item.git}}
-													td(title="'Message'") {{item.message}}						
+												tr.ann-padding(ng-repeat='item in $data')
+													td.ann-padding(title="'time'") {{item.time}}
+													td.ann-padding(title="'Message'") {{item.message}}						
 			
 		section.wallets
 			.container.text-center
@@ -118,7 +118,7 @@ html(ng-app='tables')
 						a.w-100.walletstyle(href='https://www.runebase.io/wallet')
 							p https://www.runebase.io/wallet
 
-		section#services.webhost_service
+		section#services.anouncements
 			.container
 				.row.py-5.text-center
 					.col-md-6.no-padding
@@ -172,24 +172,7 @@ html(ng-app='tables')
 							h3 PlaceHolder
 							p PlaceHolder Text
 
-		section#working.gtco-section.border-bottom(data-section='how-it-works')
-			.gtco-container
-				.gtco-heading
-					h2.gtco-left GIT Issues feed
-					table.table(ng-table='tableParams', show-filter='true')
-						tr(ng-repeat='item in $data')
-							td(title="'Git ID'") {{item.git}}
-							td(title="'Message'") {{item.message}}
-							td(title="'Link'") {{item.url}}
-							td(title="'Author'") {{item.author}}
-				.gtco-heading
-					h2.gtco-left GIT activity feed
-					table.table(ng-table='tableParams')
-						tr(ng-repeat='item in $data')
-							td(title="'Git ID'") {{item.git}}
-							td(title="'Message'") {{item.message}}
-							td(title="'Link'") {{item.url}}
-							td(title="'Author'") {{item.author}}
+
 	
 		section#contact.contact
 			.container

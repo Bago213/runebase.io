@@ -549,4 +549,17 @@ body {
 #app{
   position: relative;
 }
-
+.anouncements table.table thead tr{
+  height: auto;
+}
+.anouncements table.table thead{
+  height: auto;
+}
+.anouncements table.table tbody td, .anouncements table.table tbody th{
+  height: auto;
+}
+.ann-padding {
+   padding: 0 !important;
+   margin: 0 !important;
+   height: auto;
+}
