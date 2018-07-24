@@ -27,16 +27,16 @@ html(ng-app='tables')
 									h3 Lorem Ipsum
 									p Put a Pickle on that Rustler
 									div(style='height: 200px;')
-									a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-#{os}')
+									a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
 										i.fa.fa-download
-										| Runebase-#{os}-0.15.1
+										| Runebase-#{os}-0.15.1.#{ext}
 		section#about.webhost_service(style='background-color: #000002')
 					.py-5.text-center
 						.col-xl-12.no-padding
 							.single_webhost_left(style='background-color: #000002')
 									.col-md-8.offset-sm-2
 										.single_webhost_left_content
-											h3.gtco-left(style='color: aliceblue') OnChain Anouncements
+											h3.gtco-left(style='color: aliceblue') Anouncements
 											table.table(ng-table='tableParams')
 												tr(ng-repeat='item in $data')
 													td(title="'ID'") {{item.git}}
