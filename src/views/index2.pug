@@ -15,21 +15,19 @@ html(ng-app='tables')
 
 	body(ng-controller='MainCtrl', data-spy='scroll', data-target='#navmenu')
 		include includes/menu.pug
-		section#home.home
+		section#top.top
 			div(style='position: relative;')
 				// particles.js container
 				#particles-js
 					img.nopointer(style='position: absolute; bottom:0px; ', src='/assets/mountain.png', alt='')
-				.home_overlay
-						.nopointer
-							.main_slider_area.col-md-8.offset-sm-2
-								.single_slider.w-100
-									h3 Lorem Ipsum
-									p Put a Pickle on that Rustler
-									div(style='height: 200px;')
-									a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
-										i.fa.fa-download
-										| Runebase-#{os}-0.15.1.#{ext}
+				.main_top_area.nopointer
+					.single_slider.w-100
+						h3 Lorem Ipsum
+						p Put a Pickle on that Rustler
+						div(style='height: 200px;')
+						a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
+							i.fa.fa-download
+							| Runebase-#{os}-0.15.1.#{ext}
 		section#about.anouncements(style='background-color: #000002')
 					.py-5.text-center
 						.col-xl-12.no-padding
@@ -122,7 +120,7 @@ html(ng-app='tables')
 						a.w-100.walletstyle(href='https://www.runebase.io/wallet')
 							p https://www.runebase.io/wallet
 
-		section#services.anouncements
+		section#services.services
 			.container
 				.row.py-5.text-center
 					.col-md-6.no-padding
@@ -149,27 +147,27 @@ html(ng-app='tables')
 											p Insight explorer makes it easy to track transactions on runebase chain.
 		section#dapps.dapps
 			.dapps_overlay
-				.container
-					.row
-						.single_feature.col
+				.container.mx-auto.text-center
+					.row.center-block
+						.col
 							.single_dapps_img
 								img(src='/assets/award.png', height='128px', width='128px', alt='')
 							.separator
 							h3 PlaceHolder
 							p PlaceHolder Text								
-						.single_feature.col
+						.col
 							.single_dapps_img
 								img(src='/assets/block.png', height='128px', width='128px', alt='')
 							.separator
 							h3 PlaceHolder
 							p PlaceHolder Text								
-						.single_feature.col
+						.col
 							.single_dapps_img
 								img(src='/assets/treasure.png', height='128px', width='128px', alt='')
 							.separator
 							h3 PlaceHolder
 							p PlaceHolder Text								
-						.single_feature.col
+						.col
 							.single_dapps_img
 								img(src='/assets/lock.png', height='128px', width='128px', alt='')
 							.separator

@@ -298,7 +298,6 @@ p {
 p:last-child {
     margin-bottom: 0px;
 }
-/*.home-wrap h1,*/
 
 /*
 Section
@@ -307,6 +306,7 @@ Section
     padding: 0 !important;
     margin:0 !important;
 }
+
 /*
 Separator
 */
@@ -320,8 +320,6 @@ Separator
 /*
 Button
 */
-
-
 
 .btn {
     border: 1px solid #fff;
@@ -360,10 +358,6 @@ Button
 }
 
 
-/* Home Section */
-.home_overlay{
-    background:rgba(228, 70, 70, 0.2);
-}
 
 .single_slider h3{
     color:#fff;
@@ -379,7 +373,7 @@ Button
 }
 
 
-.main_slider_area{
+.main_top_area{
     padding: 250px 0px;
     text-align: center;
 }
@@ -395,8 +389,6 @@ Button
     padding: 90px 0px 100px 0px;
 }
 
-/*clients section*/
-/*contact us*/
 .contact{
     background: #363855;
 }
