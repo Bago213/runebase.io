@@ -352,34 +352,23 @@ Button
     padding: 0 0;
 }
 
-/*call us*/
-.text-center{
-    text-align:center !important;
-}
-
-
-
-.single_slider h3{
+.main_top_area h3{
     color:#fff;
     font-size:3rem;
     font-family: 'sanchezregular';
     margin-bottom:0;
 }
-.single_slider p{
+.main_top_area p{
     font-size:1.875rem;
     color:#fff;
     font-family: 'ralewaylight';
     margin-bottom:40px;
 }
 
-
 .main_top_area{
     padding: 250px 0px;
     text-align: center;
 }
-
-
-
 
 /*our dapps section*/ 
 .dapps{
@@ -554,4 +543,20 @@ body {
    padding: 0 !important;
    margin: 0 !important;
    height: auto;
+}
+#anouncements{
+  background-color: #000002;
+}
+.bot-0{
+  bottom:0px;
+}
+
+.alice{
+  color: aliceblue;
+}
+
+.underline{
+  width: 50%; 
+  height: 4px; 
+  background-color: black;
 }

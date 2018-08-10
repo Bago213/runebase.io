@@ -15,35 +15,34 @@ html(ng-app='tables')
 
 	body(ng-controller='MainCtrl', data-spy='scroll', data-target='#navmenu')
 		include includes/menu.pug
+
 		section#top.top
-			div(style='position: relative;')
+			.position-relative
 				// particles.js container
 				#particles-js
-					img.nopointer(style='position: absolute; bottom:0px; ', src='/assets/mountain.png', alt='')
+					img.nopointer.position-absolute.bot-0(src='/assets/mountain.png', alt='')
 				.main_top_area.nopointer
+					h3.position-relative Lorem Ipsum
+					p.position-relative Put a Pickle on that Rustler
 					.single_slider.w-100
-						h3 Lorem Ipsum
-						p Put a Pickle on that Rustler
 						div(style='height: 200px;')
-						a.btn.btn-lg.showpointer(style='', href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
+						a.btn.btn-lg.showpointer(href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
 							i.fa.fa-download
 							| Runebase-#{os}-0.15.1.#{ext}
-		section#about.anouncements(style='background-color: #000002')
-					.py-5.text-center
-						.col-xl-12.no-padding
-							.single_webhost_left(style='background-color: #000002')
-									.col-md-8.offset-sm-2
-										.single_webhost_left_content
-											h3.gtco-left(style='color: aliceblue') Anouncements
-											table.table(ng-table='tableParams')
-												tr.ann-padding(ng-repeat='item in $data')
-													td.ann-padding(title="'time'") {{item.time}}
-													td.ann-padding(title="'Message'") {{item.message}}						
+
+		section#anouncements.anouncements
+			.py-5.text-center
+				.container
+					h3.alice.gtco-left Anouncements
+					table.table(ng-table='tableParams')
+						tr.ann-padding(ng-repeat='item in $data')
+							td.ann-padding(title="'time'") {{item.time}}
+							td.ann-padding(title="'Message'") {{item.message}}						
 			
 		section.wallets#wallets
 			.container.text-center
 				h3.mt-3.mt-md-5 Choose your Runebase Wallet
-				.blue-line.mx-auto(style='width: 72px;')
+				.underline.mx-auto.mb-5
 				ul.d-flex.justify-content-around.justify-content-md-center.list-unstyled.categories
 					li.center-submenu.text-center.col-md-4.no-padding
 						a.active.wallet.walletstyle(href='#' data-rel="desktop") Desktop
@@ -59,64 +58,59 @@ html(ng-app='tables')
 					.col-md-4.no-padding
 						.row
 							.col-md-8.offset-sm-2
-								.single_webhost_left_content
-									h3 Windows
-									a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-win64-setup.exe')
-										p 64bit.exe
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win64.zip')
-										p 64bit.zip
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win32-setup.exe')
-										p 32bit.exe
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win32.zip')
-										p 32bit.zip
+								h3 Windows
+								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-win64-setup.exe')
+									p 64bit.exe
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win64.zip')
+									p 64bit.zip
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win32-setup.exe')
+									p 32bit.exe
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-win32.zip')
+									p 32bit.zip
 					.col-md-4.no-padding
 						.row
 							.col-md-8.offset-sm-2
-								.single_webhost_left_content
-									h3 Mac OS
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx.dmg')
-										p osx.dmg
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx.tar.gz')
-										p osx.tar.gz
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx64.tar.gz')
-										p osx64.tar.gz
+								h3 Mac OS
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx.dmg')
+									p osx.dmg
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx.tar.gz')
+									p osx.tar.gz
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-osx64.tar.gz')
+									p osx64.tar.gz
 					.col-md-4.no-padding
 						.row
 							.col-md-8.offset-sm-2
-								.single_webhost_left_content
-									h3 Linux
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-x86_64-linux-gnu.tar.gz')
-										p x86_64.tar.gz
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-i686-pc-linux-gnu.tar.gz')
-										p i686.tar.gz
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-arm-linux-gnueabihf.tar.gz')
-										p arm.tar.gz
-									a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-aarch64-linux-gnu.tar.gz')
-										p aarch64.tar.gz
+								h3 Linux
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-x86_64-linux-gnu.tar.gz')
+									p x86_64.tar.gz
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-i686-pc-linux-gnu.tar.gz')
+									p i686.tar.gz
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-arm-linux-gnueabihf.tar.gz')
+									p arm.tar.gz
+								a.w-100.walletstyle(href='http://downloads.runebase.io/runebase-0.15.1-aarch64-linux-gnu.tar.gz')
+									p aarch64.tar.gz
 				.row.selection#mobile.d-none.text-center
 					.col-md-12.text-center
 						h3 Mobile
 					.col-md-6.no-padding
 						.row
 							.col-md-8.offset-sm-2
-								.single_webhost_left_content
-									h3 Android
-									.w-100.walletstyle(href='https://explorer.runebase.io')
-										p apk
+								h3 Android
+								.w-100.walletstyle(href='https://explorer.runebase.io')
+									p apk
 					.col-md-6.no-padding
 						.row
 							.col-md-8.offset-sm-2
-								.single_webhost_left_content
-									h3 IOS
-									a.w-100.walletstyle(href='https://explorer.runebase.io')
-										p ios
+								h3 IOS
+								a.w-100.walletstyle(href='https://explorer.runebase.io')
+									p ios
 				.row#web.selection.d-none
 					.col-md-12.text-center
 						h3 Web
 						#app
 							block content
 								wallet
-						p Webwallet also available at
+						p.mt-5 Webwallet also available at
 						a.w-100.walletstyle(href='https://www.runebase.io/wallet')
 							p https://www.runebase.io/wallet
 
@@ -124,27 +118,26 @@ html(ng-app='tables')
 			.container
 				.row.py-5.text-center
 					.col-md-6.no-padding
-						.single_webhost_left
-							.row
-								.col-md-8.offset-sm-2
-									.single_webhost_left_img
-										a(href='https://explorer.runebase.io')
-											img(src='/assets/explorer.png', alt='')
-									.single_webhost_left_content
-										a.h3(href='https://explorer.runebase.io',style='color: aliceblue') Runebase Explorer
-										a(href='https://explorer.runebase.io')
-											p Insight explorer makes it easy to track transactions on runebase chain.
+						.row
+							.col-md-8.offset-sm-2
+								.single_img
+									a(href='https://explorer.runebase.io')
+										img(src='/assets/explorer.png', alt='')
+								.single_content
+									a.h3.alice(href='https://explorer.runebase.io') Runebase Explorer
+									a(href='https://explorer.runebase.io')
+										p Insight explorer makes it easy to track transactions on runebase chain.
 					.col-md-6.no-padding
-						.single_webhost_left
-							.row
-								.col-md-8.offset-sm-2
-									.single_webhost_left_img
-										a(href='https://explorer.runebase.io')
-											img(src='/assets/explorer.png', alt='')
-									.single_webhost_left_content
-										a.h3(href='https://explorer.runebase.io',style='color: aliceblue') Runebase Explorer
-										a(href='https://explorer.runebase.io')
-											p Insight explorer makes it easy to track transactions on runebase chain.
+						.row
+							.col-md-8.offset-sm-2
+								.single_img
+									a(href='https://explorer.runebase.io')
+										img(src='/assets/explorer.png', alt='')
+								.single_content
+									a.h3.alice(href='https://explorer.runebase.io') Runebase Explorer
+									a(href='https://explorer.runebase.io')
+										p Insight explorer makes it easy to track transactions on runebase chain.
+
 		section#dapps.dapps
 			.dapps_overlay
 				.container.mx-auto.text-center
@@ -173,30 +166,24 @@ html(ng-app='tables')
 							.separator
 							h3 PlaceHolder
 							p PlaceHolder Text
-
-
 	
 		section#contact.contact
 			.container
-					.main_contact
-						.contactwithmap_content
-							.contact_overlay
-								.col-md-8.col-12
-									.locations_map
-								.col-md-3.col-12
-									.contactwithmap_menu
-										h2 Lorem Ipsum
-										ul.footer_menu
-											li
-												a(href='#home') Placeholder
-											li
-												a(href='#feature') Placeholder
-											li
-												a(href='#services') Placeholder
-											li
-												a(href='#downloads') Placeholder
-											li
-												a(href='#working') Placeholder
+				.col-md-3.col-12
+					.contactwithmap_menu
+						h2 Lorem Ipsum
+						ul.footer_menu
+							li
+								a(href='#home') Placeholder
+							li
+								a(href='#feature') Placeholder
+							li
+								a(href='#services') Placeholder
+							li
+								a(href='#downloads') Placeholder
+							li
+								a(href='#working') Placeholder
+
 		include includes/foot.pug
 
 		script(src='/assets/angular.js')
