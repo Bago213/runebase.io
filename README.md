@@ -26,31 +26,30 @@ Create the bundle with browerify-hmr disabled for production. remove from packag
 ```
 browserify -t vueify -e src/wallet/main.js -o public/javascripts/bundle.js -v
 ```
-### Nginx Server Block
 
+#### Nginx Server Block
 ```
 server {
   server_name runebase.io www.runebase.io;
-        ## gzip config
-        gzip on;
-        gzip_min_length 1000;
-        gzip_comp_level 5;
-        gzip_proxied any;
-        gzip_vary on;
-        gzip_types
-            text/css
-            text/javascript
-            text/xml
-            text/plain
-            text/x-component
-            application/javascript
-            application/json
-            application/xml
-            application/rss+xml
-            font/truetype
-            font/opentype
-            application/vnd.ms-fontobject
-            image/svg+xml;
+  gzip on;
+  gzip_min_length 1000;
+  gzip_comp_level 5;
+  gzip_proxied any;
+  gzip_vary on;
+  gzip_types
+    text/css
+    text/javascript
+    text/xml
+    text/plain
+    text/x-component
+    application/javascript
+    application/json
+    application/xml
+    application/rss+xml
+    font/truetype
+    font/opentype
+    application/vnd.ms-fontobject
+    image/svg+xml;
   location / {
     proxy_pass http://localhost:3000;
     proxy_http_version 1.1;
@@ -59,9 +58,7 @@ server {
     proxy_set_header Host $host;
     proxy_cache_bypass $http_upgrade;
   }
-
-    listen 80; # managed by Certbot
-
+    listen 80;
 }
 
 ```
