@@ -387,11 +387,11 @@ Button
 
 
 
-/*our features section*/ 
-.feature{
+/*our dapps section*/ 
+.dapps{
     background: #ccc;
 }
-.feature_overlay{
+.dapps_overlay{
     padding: 90px 0px 100px 0px;
 }
 
@@ -444,7 +444,7 @@ Button
     padding: 20px 0px;
     background: #363855;
 }
-.footer .main_footer p{
+.footer p{
     color:#fff;
 }
 .scrollup{
