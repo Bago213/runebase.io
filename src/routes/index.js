@@ -22,7 +22,7 @@ router.get('/wallet', (req, res, next) => {
 
 router.get('/', function (req, res) {
     console.log(res.os); 
-    res.render('index2', {os: res.os, ext: res.osExt})
+    res.render('index', {os: res.os, ext: res.osExt})
 });
 
 module.exports = router;
