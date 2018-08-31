@@ -2,15 +2,20 @@
 
 ### NVM
 ```
-docs
+apt-get update
+apt-get install build-essential libssl-dev
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
+source ~/.profile
 
 ```
+
 ### Nodejs
 ```
 nvm i v6
 nvm use v6
 
 ```
+
 ### Base Install
 
 #### Dev
