@@ -22,7 +22,7 @@ router.get('/wallet', (req, res, next) => {
 
 router.get('/', function (req, res) {
     console.log(res.os); 
-    res.render('index', {os: res.os, ext: res.osExt})
+    res.render('index', {downloadName: res.downloadName, downloadLink: res.downloadLink})
 });
 
 module.exports = router;

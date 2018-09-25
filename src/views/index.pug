@@ -26,9 +26,9 @@ html(ng-app='myApp')
 					p.position-relative Put a Pickle on that Rustler
 					.single_slider.w-100
 						div(style='height: 200px;')
-						a.btn.btn-lg.showpointer(href='https://downloads.runebase.io/runebase-0.15.1-' + os + '-' + ext)
+						a.btn.btn-lg.showpointer(href=downloadLink)
 							i.fa.fa-download
-							| Runebase-#{os}-0.15.1.#{ext}
+							| #{downloadName}
 
 		section#anouncements.anouncements
 			.py-5.text-center
@@ -104,8 +104,8 @@ html(ng-app='myApp')
 						.row
 							.col-md-8.offset-sm-2
 								h3 Android
-								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-app-release.apk')
-									p apk
+								a.w-100.walletstyle(href='https://play.google.com/store/apps/details?id=org.runebase.wallet')
+									p google play
 					.col-md-6.no-padding
 						.row
 							.col-md-8.offset-sm-2

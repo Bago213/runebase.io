@@ -2,36 +2,36 @@ exports.os = function(req, res, next) {
   switch(true)
     {
     case !!req.headers['user-agent'].match(/Win64/):
-         res.os = "win64";
-         res.osExt = "setup.exe";
+         res.downloadLink = "https://downloads.runebase.io/runebase-0.15.1-win64-setup.exe";
+         res.downloadName = "runebase-0.15.1-win64-setup.exe";
          break;
     case !!req.headers['user-agent'].match(/Win32/):
-         res.os = "win32";
-         res.osExt = "setup.exe";
+         res.downloadLink = "https://downloads.runebase.io/runebase-0.15.1-win32-setup.exe";
+         res.downloadName = "runebase-0.15.1-win32-setup.exe";
          break;
     case !!req.headers['user-agent'].match(/iPad/):
-         res.os = "ipad";
-         res.osExt = "exe";
+         res.downloadLink = "ipad";
+         res.downloadName = "ipad";
          break;
     case !!req.headers['user-agent'].match(/iPhone/):
-         res.os = "iphone";
-         res.osExt = "exe";
+         res.downloadLink = "iphone";
+         res.downloadName = "iphone";
          break;
     case !!req.headers['user-agent'].match(/Osx/):
-         res.os = "osx";
-         res.osExt = ".dmg";
+         res.downloadLink = "https://downloads.runebase.io/runebase-0.15.1-osx.dmg";
+         res.downloadName = "runebase-0.15.1-osx.dmg";
          break;
     case !!req.headers['user-agent'].match(/Android/):
-         res.os = "android";
-         res.osExt = ".apk";
+         res.downloadLink = "https://play.google.com/store/apps/details?id=org.runebase.wallet";
+         res.downloadName = "runebase-0.15.1-win64-setup.exe";
          break;
     case !!req.headers['user-agent'].match(/Linux/):
-         res.os = "linux";
-         res.osExt = ".tar.gz";
+         res.downloadLink = "https://downloads.runebase.io/runebase-0.15.1-x86_64-linux-gnu.tar.gz";
+         res.downloadName = "runebase-0.15.1-x86_64-linux-gnu.tar.gz";
          break;
     default:
-         res.os = "linux";
-         res.osExt = ".tar.gz";
+         res.downloadLink = "https://downloads.runebase.io/runebase-0.15.1-x86_64-linux-gnu.tar.gz";
+         res.downloadName = "runebase-0.15.1-x86_64-linux-gnu.tar.gz";
     }
   next();
 }
