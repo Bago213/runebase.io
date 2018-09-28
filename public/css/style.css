@@ -391,6 +391,15 @@ p:last-child {
     background: linear-gradient(#283048 40%, #ccc 100%, rgba(255, 255, 255, 0));
   
 }
+.services{
+  background: linear-gradient(#ccc 40%, #9999ff 100%, rgba(255, 255, 255, 0));
+}
+.dapps{
+  background: linear-gradient(#9999ff 40%, #404040 100%, rgba(255, 255, 255, 0));
+}
+.community{
+  background: linear-gradient(#404040 40%, #ccc 100%, rgba(255, 255, 255, 0));
+}
 .center-submenu{
   text-align: center;
   width: 100%;
@@ -398,7 +407,53 @@ p:last-child {
 body {
   background: #ccc;
 }
-
+.services h3, .services p, .services a{
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.roadmap-timeline {
+      color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.anouncements {
+    color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.main_top_area h3{
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.main_top_area p{
+    color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.single_slider a{
+      color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
 .walletstyle{
     border: 2px solid #4CAF50;    
     padding: 16px 32px;
@@ -410,8 +465,23 @@ body {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-}
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 
+}
+.wallets h3{
+  font-size: 2rem;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
 .walletstyle:hover, .walletstyle.active {
     background-color: #4CAF50;
     color: white;
