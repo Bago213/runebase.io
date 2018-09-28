@@ -827,8 +827,8 @@ html(ng-app='myApp')
 						.row
 							.col-md-8.offset-sm-2
 								h3 IOS
-								a.w-100.walletstyle(href='https://explorer.runebase.io')
-									p ios
+								a.w-100.walletstyle(href='#')
+									p Comming Soon
 				.row#web.selection.d-none
 					.col-md-12.text-center
 						h3 Web
@@ -842,26 +842,22 @@ html(ng-app='myApp')
 		section#services.services
 			.container
 				.row.py-5.text-center
-					.col-md-6.no-padding
-						.row
-							.col-md-8.offset-sm-2
-								.single_img
-									a(href='https://explorer.runebase.io')
-										img(src='/assets/explorer.png', alt='')
-								.single_content
-									a.h3.alice(href='https://explorer.runebase.io') Runebase Explorer
-									a(href='https://explorer.runebase.io')
-										p Insight explorer makes it easy to track transactions on runebase chain.
-					.col-md-6.no-padding
-						.row
-							.col-md-8.offset-sm-2
-								.single_img
-									a(href='https://explorer.runebase.io')
-										img(src='/assets/explorer.png', alt='')
-								.single_content
-									a.h3.alice(href='https://faucet.runebase.io') Runebase Faucet
-									a(href='https://faucet.runebase.io')
-										p A Runebase faucet where you can claim free runes every hour.
+					.col-md-6.no-padding.col.service-collection
+						.single_img
+							a(href='https://explorer.runebase.io')
+								img(src='/assets/explorer.png', alt='')
+						.single_content
+							a.h3.alice(href='https://explorer.runebase.io') Runebase Explorer
+							a(href='https://explorer.runebase.io')
+								p Insight explorer makes it easy to track transactions on runebase chain.
+					.col-md-6.no-padding.service-collection
+						.single_img
+							a(href='https://faucet.runebase.io')
+								img(src='/assets/explorer.png', alt='')
+						.single_content
+							a.h3.alice(href='https://faucet.runebase.io') Runebase Faucet
+							a(href='https://faucet.runebase.io')
+								p A Runebase faucet where you can claim free runes every hour.
 
 		section#dapps.dapps
 			.dapps_overlay
@@ -893,33 +889,25 @@ html(ng-app='myApp')
 							p PlaceHolder Text
 
 		section#community.community
-			.dapps_overlay
+			.community_overlay
 				.container.mx-auto.text-center
 					.row.center-block
-						.col
-							.single_dapps_img
-								img(src='/assets/award.png', height='128px', width='128px', alt='')
+						.col.community-collection
+							.single_community_img
+								a(href='https://discord.gg/hYhZB9m')
+									img(src='/assets/discord.png', height='128px', width='128px', alt='')
 							.separator
-							h3 PlaceHolder
-							p PlaceHolder Text								
-						.col
-							.single_dapps_img
-								img(src='/assets/block.png', height='128px', width='128px', alt='')
+								a.community-text-link(href='https://discord.gg/hYhZB9m')
+									h3 Discord
+									p Contact us on Discord						
+						.col.col.community-collection
+							.single_community_img
+								a(href='https://www.medium.com/@runebase')
+									img(src='/assets/medium.png', height='128px', width='128px', alt='')
 							.separator
-							h3 PlaceHolder
-							p PlaceHolder Text								
-						.col
-							.single_dapps_img
-								img(src='/assets/treasure.png', height='128px', width='128px', alt='')
-							.separator
-							h3 PlaceHolder
-							p PlaceHolder Text								
-						.col
-							.single_dapps_img
-								img(src='/assets/lock.png', height='128px', width='128px', alt='')
-							.separator
-							h3 PlaceHolder
-							p PlaceHolder Text
+								a.community-text-link(href='https://www.medium.com/@runebase')
+									h3 Medium
+									p Follow us on Medium
 	
 		section#contact.contact
 			.container

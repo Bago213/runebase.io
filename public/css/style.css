@@ -705,3 +705,37 @@ body {
     margin-left:auto; 
   margin-right:0;
 }
+
+.community .community-text-link p, .community .community-text-link h3{
+  margin-bottom: 0;
+  color: white;
+      text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.community-collection:hover p, .community-collection:hover h3, .community-collection:hover img, .community-collection:hover a{
+  color: black;
+      text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.service-collection p, .service-collection h3, .service-collection a{
+        text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.service-collection:hover p, .service-collection:hover h3, .service-collection:hover img, .service-collection:hover a{
+  color: black;
+}
+
+.service-collection:hover p, .service-collection:hover h3, .service-collection:hover img, .service-collection:hover a + .service-collection p{
+  color: white;
+}
+
