@@ -631,7 +631,7 @@ body {
   position: relative;
 }
 
-.box-right{
+#mouse{
     margin-left:auto; 
   margin-right:0;
 }
