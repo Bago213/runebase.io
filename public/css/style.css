@@ -1,12 +1,115 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
-  font-weight: normal;
+  font-family: 'Open Sans';
+  src: local('Open Sans Light'),
+         local('OpenSans-Light'),
+         url('opensanslight.woff2') format('woff2'),
+         url('opensanslight.woff') format('woff'),
+         url('opensanslight.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Light Italic'),
+         local('OpenSansLight-Italic'),
+         url('opensanslightitalic.woff2') format('woff2'),
+         url('opensanslightitalic.woff') format('woff'),
+         url('opensanslightitalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+         local('OpenSans'),
+         url('opensans.woff2') format('woff2'),
+         url('opensans.woff') format('woff'),
+         url('opensans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Italic'),
+         local('OpenSans-Italic'),
+         url('opensansitalic.woff2') format('woff2'),
+         url('opensansitalic.woff') format('woff'),
+         url('opensansitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Semibold'),
+         local('OpenSans-Semibold'),
+         url('opensanssemibold.woff2') format('woff2'),
+         url('opensanssemibold.woff') format('woff'),
+         url('opensanssemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Semibold Italic'),
+         local('OpenSans-SemiboldItalic'),
+         url('opensanssemibolditalic.woff2') format('woff2'),
+         url('opensanssemibolditalic.woff') format('woff'),
+         url('opensanssemibolditalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Bold'),
+         local('OpenSans-Bold'),
+         url('opensansbold.woff2') format('woff2'),
+         url('opensansbold.woff') format('woff'),
+         url('opensansbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Bold Italic'),
+         local('OpenSans-BoldItalic'),
+         url('opensansbolditalic.woff2') format('woff2'),
+         url('opensansbolditalic.woff') format('woff'),
+         url('opensansbolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Extrabold'),
+         local('OpenSans-Extrabold'),
+         url('opensansextrabold.woff2') format('woff2'),
+         url('opensansextrabold.woff') format('woff'),
+         url('opensansextrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Extrabold Italic'),
+         local('OpenSans-ExtraboldItalic'),
+         url('opensansextrabolditalic.woff2') format('woff2'),
+         url('opensansextrabolditalic.woff') format('woff'),
+         url('opensansextrabolditalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
 body {
-  font-family: "Droid Sans", Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -39,7 +142,6 @@ p {
 
 h2, h3 {
   color: #000;
-  font-family: "Droid Sans", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -62,7 +164,6 @@ h2, h3 {
 
 .btn {
   margin-right: 4px;
-  font-family: "Droid Sans", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 4px;
@@ -97,6 +198,7 @@ body {
     color: #565656;
     width: 100%;
     padding: 0;
+    margin:0; 
 }
 
 img {
@@ -142,7 +244,6 @@ img {
 
 h2,
 h3 {
-    /*font-family: 'Lane', sans-serif;*/
     font-weight: 300;
     margin: 0;
 }
@@ -164,28 +265,6 @@ p {
 p:last-child {
     margin-bottom: 0px;
 }
-
-/*
-Section
-*/
-.no-padding {
-    padding: 0 !important;
-    margin:0 !important;
-}
-
-/*
-Separator
-*/
-.separator {
-    height: 3px;
-    width: 70px;
-    margin:30px auto;
-    background: #8d8d99;
-}
-
-/*
-Button
-*/
 
 .btn {
     border: 1px solid #fff;
@@ -221,13 +300,11 @@ Button
 .main_top_area h3{
     color:#fff;
     font-size:3rem;
-    font-family: 'sanchezregular';
     margin-bottom:0;
 }
 .main_top_area p{
     font-size:1.875rem;
     color:#fff;
-    font-family: 'ralewaylight';
     margin-bottom:40px;
 }
 
@@ -250,7 +327,6 @@ Button
 
 .contact .contactwithmap_menu h2{
     font-size:1.125rem;
-    font-family: 'ralewaybold';
     color:#fff;
 
 }
@@ -284,11 +360,6 @@ Button
     color:#fff;
 }
 
-body{ 
-  margin:0; 
-  font:normal 75% Arial, Helvetica, sans-serif; 
-} 
-
 #particles-js{ 
   position:absolute; width: 100%; 
   height: 100%; 
@@ -317,7 +388,8 @@ body{
   height: unset !important;
 } 
 .wallets{
-    background: #ccc;
+    background: linear-gradient(#283048 40%, #ccc 100%, rgba(255, 255, 255, 0));
+  
 }
 .center-submenu{
   text-align: center;

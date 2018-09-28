@@ -6,8 +6,6 @@ html(ng-app='myApp')
 		title Runebase
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', href='/assets/material-icons.css')
-		link(rel='stylesheet', href='/assets/runebase-icons.less')
 		link(rel='stylesheet', href='/assets/vuetify.min.css')
 		link(rel='shortcut icon', type='image/png', href='/assets/runebase.png')
 		link(rel='stylesheet', href='/assets/bootstrap.min.css')
@@ -59,7 +57,7 @@ html(ng-app='myApp')
 							| 2018 
 							span Q2
 						.roadmap-text
-							p.timeline__day-sum Start Blockchain Development adventure
+							p.timeline__day-sum Start Blockchain Development
 							.row
 								.col.timeline__item.cubesize
 									#cube
@@ -194,6 +192,7 @@ html(ng-app='myApp')
 								span Q4
 						.roadmap-text
 							p.timeline__day-sum Web development
+							p.timeline__day-sum Web Wallet
 							p.timeline__day-sum Bitcoin Talk Announcement
 							p.timeline__day-sum Apply for Exchange
 							.container(style='width: 280px')
@@ -209,9 +208,9 @@ html(ng-app='myApp')
 								| 2019 
 								span Q1
 						.roadmap-text 
-							p.timeline__day-sum Prediction Market
-							p.timeline__day-sum Dapps
+							p.timeline__day-sum Prediction Market							
 							p.timeline__day-sum IOS Wallet
+							p.timeline__day-sum Dapps
 							svg.spacer-marg(width='200px', height='200px', viewBox='-160 -160 320 320')
 								defs
 									mask#mask
@@ -234,8 +233,9 @@ html(ng-app='myApp')
 								| 2019 
 								span Q2
 						.roadmap-text 
-							p.timeline__day-sum
-								| All of the anticipation of the past year reaches a climax as you reach the North Pole! Many travelers find themselves overcome with emotion, while others are in a festive mood. Take photos, wave a flag, enjoy your moment! Later, everyone enjoys a champagne toast and a BBQ on the ice. Add an exclamation to your success by rising high in one of our hot air balloons to commemerate this great moment.
+							p.timeline__day-sum IOS Wallet
+							p.timeline__day-sum Dapps
+							p.timeline__day-sum Brainstorming Sessions
 							div(style='  width: 130px;  margin: 3em auto;')
 								svg#hei-loader(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='-16 5.5 115.3 141.5', style='enable-background:new -16 5.5 115.3 141.5;', xml:space='preserve')
 									g#bulb_1_
@@ -863,6 +863,35 @@ html(ng-app='myApp')
 										p A Runebase faucet where you can claim free runes every hour.
 
 		section#dapps.dapps
+			.dapps_overlay
+				.container.mx-auto.text-center
+					.row.center-block
+						.col
+							.single_dapps_img
+								img(src='/assets/award.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.col
+							.single_dapps_img
+								img(src='/assets/block.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.col
+							.single_dapps_img
+								img(src='/assets/treasure.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text								
+						.col
+							.single_dapps_img
+								img(src='/assets/lock.png', height='128px', width='128px', alt='')
+							.separator
+							h3 PlaceHolder
+							p PlaceHolder Text
+
+		section#community.community
 			.dapps_overlay
 				.container.mx-auto.text-center
 					.row.center-block
