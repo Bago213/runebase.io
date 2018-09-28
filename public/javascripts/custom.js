@@ -15,5 +15,20 @@ $(document).ready(function(){
         event.preventDefault();
         $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top + (-72) }, 500);
     });
-    
+    $(document).on("scroll", onScroll);
 });
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#bs-example-navbar-collapse-1 a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top + (-500) <= scrollPos && refElement.position().top + (-500) + refElement.height() > scrollPos) {
+            $('#bs-example-navbar-collapse-1 ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
