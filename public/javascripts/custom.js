@@ -24,7 +24,7 @@ function onScroll(event){
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top + (-400) <= scrollPos && refElement.position().top + (-400) + refElement.height() > scrollPos) {
-            $('#bs-example-navbar-collapse-1 ul li a').removeClass("active");
+            $('#bs-example-navbar-collapse-1 nav a').removeClass("active");
             currLink.addClass("active");
         }
         else{

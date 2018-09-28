@@ -538,3 +538,100 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+
+/*Animated Navigation*/
+.nav {
+  margin: 0.1rem 0 0.1rem;
+
+}
+
+/*  ## MENU BORDER ANIMATION */
+@media only screen and (min-width: 480px) {
+/* TOP border animation on hover*/
+.mouse .nav nav a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  border-radius: 1px;
+  width: 0;
+  height: 1px;
+  background: hsla(0, 50%, 30%, 0);
+  transition: all .5s ease-in-out;
+}
+
+.mouse .nav nav a:hover:before {
+  left: .4rem;
+  width: calc(100% - (.4rem * 2));
+  background: hsla(0, 50%, 50%, 1);
+}
+ .nav nav a:first-child:after {
+  left: 200%;
+}
+
+.nav nav a:last-child:after {
+  left: -100%;
+}
+}
+
+/* BOTTOM border animation on item active and hover*/
+.nav nav a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  border-radius: 1px;
+  width: 0;
+  height: 3px;
+  background: hsla(0, 50%, 30%, 0);
+}
+
+.nav nav a.active:after {
+  left: .4rem;
+  width: calc(100% - (.4rem * 2));
+  background: hsla(0, 50%, 30%, 1);
+  transition: all .5s ease-in-out;
+}
+
+.nav nav a.active:hover:after {
+  left: .4rem;
+  width: calc(100% - (.4rem * 2));
+  background: hsla(0, 50%, 50%, 1);
+}
+
+@media only screen and (max-width: 480px) {
+  .nav nav {
+    flex-flow: column nowrap;    
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: center;
+  }
+  a.menu-item {
+    max-width: 12ex;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .nav nav {
+    justify-content: space-around;
+  }
+    a.menu-item {
+    margin: 0;
+  }
+}
+
+
+
+.navbar-light .navbar-nav .nav-link{
+  position: relative;
+}
+
+.box-right{
+    margin-left:auto; 
+  margin-right:0;
+}
