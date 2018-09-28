@@ -23,7 +23,7 @@ function onScroll(event){
     $('#bs-example-navbar-collapse-1 a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top + (-500) <= scrollPos && refElement.position().top + (-500) + refElement.height() > scrollPos) {
+        if (refElement.position().top + (-400) <= scrollPos && refElement.position().top + (-400) + refElement.height() > scrollPos) {
             $('#bs-example-navbar-collapse-1 ul li a').removeClass("active");
             currLink.addClass("active");
         }
