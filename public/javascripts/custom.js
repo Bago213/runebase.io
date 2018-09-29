@@ -11,13 +11,23 @@ $(document).ready(function(){
 	      $('#' + $(this).data('rel')).fadeIn(0);
 	});
 
+    //Goto Section event
     $( "a.nav-link" ).click(function( event ) {
         event.preventDefault();
         $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top + (-72) }, 500);
     });
+
+    //Scroll Menu Event
     $(document).on("scroll", onScroll);
+
+    //Set Wallet Top Navigation Items To Same Width
+    var WalletNavItemWidth = Math.max.apply( null, $( '.wallet' ).map( function () {
+    return $( this ).outerWidth( true );
+    }).get() );
+    $(".wallet").width(WalletNavItemWidth)
 });
 
+//Scroll Menu event
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
     $('#bs-example-navbar-collapse-1 a').each(function () {

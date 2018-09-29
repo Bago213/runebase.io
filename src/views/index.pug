@@ -46,7 +46,7 @@ html(ng-app='myApp')
 					div
 				.container
 					ul.d-flex.justify-content-around.justify-content-md-center.list-unstyled.categories(ng-controller="myController")
-						li.center-submenu.text-center.col-md-4.no-padding(ng-repeat='obj in coinData')
+						li.center-submenu.text-center.col-md-4(ng-repeat='obj in coinData')
 							p(ng-cloak) {{obj.title}}
 							p(ng-cloak) {{obj.message}}
 		section.roadmap-timeline.timeline-wrapper#roadmap
@@ -770,11 +770,11 @@ html(ng-app='myApp')
 				h3.mt-3.mt-md-5 Choose your Runebase Wallet
 				.underline.mx-auto.mb-5
 				div.row
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
 						a.active.wallet.walletstyle(href='#' data-rel="desktop") Desktop
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
 						a.wallet.walletstyle(href='#' data-rel="mobile") Mobile
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
 						a.wallet.walletstyle(href='#' data-rel="web") Web
 
 			.container.wallet-cat
