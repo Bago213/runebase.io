@@ -29,9 +29,7 @@ html(ng-app='myApp')
 					.single_slider.w-100.my-auto
 						div(style='height: 200px;')
 						a.btn.btn-lg.showpointer(href=downloadLink)
-							i.fa.fa-download
 							| #{downloadName}
-
 
 		section#anouncements.anouncements
 			.py-5.text-center
@@ -770,11 +768,11 @@ html(ng-app='myApp')
 				h3.mt-3.mt-md-5 Choose your Runebase Wallet
 				.underline.mx-auto.mb-5
 				div.row
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-12.col-xs-12
 						a.active.wallet.walletstyle(href='#' data-rel="desktop") Desktop
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-12.col-xs-12
 						a.wallet.walletstyle(href='#' data-rel="mobile") Mobile
-					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-12.col-xs-12
 						a.wallet.walletstyle(href='#' data-rel="web") Web
 
 			.container.wallet-cat
@@ -805,6 +803,8 @@ html(ng-app='myApp')
 									p osx.tar.gz
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-osx64.tar.gz')
 									p osx64.tar.gz
+								a.w-100.walletstyle(href='https://github.com/runebase/runebase')
+									p source
 					.col-xs-4.col-lg-4.col-md-6.col-sm-12.col-xs-12
 						.row
 							.col-md-12
@@ -823,14 +823,14 @@ html(ng-app='myApp')
 						h3 Mobile
 					.col-md-6.no-padding
 						.row
-							.col-md-8.offset-sm-2
+							.col-md-8
 								i.fab.fa-android.brand-icon-size
 								h3 Android
 								a.w-100.walletstyle(href='https://play.google.com/store/apps/details?id=org.runebase.wallet')
 									p google play
 					.col-md-6.no-padding
 						.row
-							.col-md-8.offset-sm-2
+							.col-md-8
 								i.fab.fa-apple.brand-icon-size
 								h3 IOS
 								a.w-100.walletstyle(href='#')
