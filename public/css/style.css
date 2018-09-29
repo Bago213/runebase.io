@@ -400,10 +400,7 @@ p:last-child {
 .community{
   background: linear-gradient(#404040 40%, #ccc 100%, rgba(255, 255, 255, 0));
 }
-.center-submenu{
-  text-align: center;
-  width: 100%;
-}
+
 body {
   background: #ccc;
 }
@@ -461,7 +458,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -735,7 +732,18 @@ body {
   color: black;
 }
 
-.service-collection:hover p, .service-collection:hover h3, .service-collection:hover img, .service-collection:hover a + .service-collection p{
+.service-collection:hover p, .service-collection:hover h3, .service-collection:hover img + .service-collection p{
   color: white;
 }
+.brand-icon-size{
+          text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  font-size: 100px;
+}
 
+.main_top_area .single_slider a{
+  line-height: 0 !important;
+}

@@ -12,8 +12,8 @@ html(ng-app='myApp')
 		link(rel='stylesheet', href='/assets/bootstrap.min.css')
 		link(rel='stylesheet', href='../assets/style.css')
 		link(rel='stylesheet', href='../assets/roadmap.css')
-
-
+		link(rel='stylesheet', href='/assets/material-icons.css')
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css')
 
 	body(ng-controller='MainCtrl', data-spy='scroll', data-target='#navmenu')
 		include includes/menu.pug
@@ -26,7 +26,7 @@ html(ng-app='myApp')
 				.main_top_area.nopointer
 					h3.position-relative Runebase
 					p.position-relative Smart-Contract Platform
-					.single_slider.w-100
+					.single_slider.w-100.my-auto
 						div(style='height: 200px;')
 						a.btn.btn-lg.showpointer(href=downloadLink)
 							i.fa.fa-download
@@ -769,21 +769,22 @@ html(ng-app='myApp')
 			.container.text-center
 				h3.mt-3.mt-md-5 Choose your Runebase Wallet
 				.underline.mx-auto.mb-5
-				ul.d-flex.justify-content-around.justify-content-md-center.list-unstyled.categories
-					li.center-submenu.text-center.col-md-4.no-padding
+				div.row
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
 						a.active.wallet.walletstyle(href='#' data-rel="desktop") Desktop
-					li.center-submenu.text-center.col-md-4.no-padding
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
 						a.wallet.walletstyle(href='#' data-rel="mobile") Mobile
-					li.center-submenu.text-center.col-md-4.no-padding
-						a.wallet.walletstyle(href='#' data-rel="web") Web			
+					div.text-center.col-xs-4.col-lg-4.col-md-4.col-sm-4.col-xs-4.no-padding
+						a.wallet.walletstyle(href='#' data-rel="web") Web
 
 			.container.wallet-cat
 				.row.selection#desktop.text-center
 					.col-md-12
 						h3 Core
-					.col-md-4.no-padding
+					.col-xs-4.col-lg-4.col-md-6.col-sm-12.col-xs-12
 						.row
-							.col-md-8.offset-sm-2
+							.col-md-12
+								i.fab.fa-windows.brand-icon-size
 								h3 Windows
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-win64-setup.exe')
 									p 64bit.exe
@@ -793,9 +794,10 @@ html(ng-app='myApp')
 									p 32bit.exe
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-win32.zip')
 									p 32bit.zip
-					.col-md-4.no-padding
+					.col-xs-4.col-lg-4.col-md-6.col-sm-12.col-xs-12
 						.row
-							.col-md-8.offset-sm-2
+							.col-md-12
+								i.fab.fa-apple.brand-icon-size
 								h3 Mac OS
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-osx.dmg')
 									p osx.dmg
@@ -803,9 +805,10 @@ html(ng-app='myApp')
 									p osx.tar.gz
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-osx64.tar.gz')
 									p osx64.tar.gz
-					.col-md-4.no-padding
+					.col-xs-4.col-lg-4.col-md-6.col-sm-12.col-xs-12
 						.row
-							.col-md-8.offset-sm-2
+							.col-md-12
+								i.fab.fa-linux.brand-icon-size
 								h3 Linux
 								a.w-100.walletstyle(href='https://downloads.runebase.io/runebase-0.15.1-x86_64-linux-gnu.tar.gz')
 									p x86_64.tar.gz
@@ -821,12 +824,14 @@ html(ng-app='myApp')
 					.col-md-6.no-padding
 						.row
 							.col-md-8.offset-sm-2
+								i.fab.fa-android.brand-icon-size
 								h3 Android
 								a.w-100.walletstyle(href='https://play.google.com/store/apps/details?id=org.runebase.wallet')
 									p google play
 					.col-md-6.no-padding
 						.row
 							.col-md-8.offset-sm-2
+								i.fab.fa-apple.brand-icon-size
 								h3 IOS
 								a.w-100.walletstyle(href='#')
 									p Coming Soon
@@ -918,29 +923,13 @@ html(ng-app='myApp')
 							h2 Documentation
 							ul.footer_menu
 								li
-									a(href='#home') How to Stake?
-								li
-									a(href='#feature') Placeholder
-								li
-									a(href='#services') Placeholder
-								li
-									a(href='#downloads') Placeholder
-								li
-									a(href='#working') Placeholder
+									a(href='https://github.com/Runebase/runebase/wiki/Staking') How to Stake?
 					.col-md-3
 						.docswithmap_menu
 							h2 Resources
 							ul.footer_menu
 								li
 									a(href='https://github.com/runebase') Github
-								li
-									a(href='#feature') Placeholder
-								li
-									a(href='#services') Placeholder
-								li
-									a(href='#downloads') Placeholder
-								li
-									a(href='#working') Placeholder
 					.col-md-3
 						.docswithmap_menu
 							h2 Channels

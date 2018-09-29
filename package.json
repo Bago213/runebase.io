@@ -9,6 +9,7 @@
     "start": "node ./src/bin/www"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "@ledgerhq/hw-app-btc": "^4.7.3",
     "@ledgerhq/hw-transport-u2f": "^4.7.3",
     "angular": "^1.7.2",

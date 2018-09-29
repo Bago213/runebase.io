@@ -43,6 +43,7 @@ app.use('/assets', [
     express.static(__dirname + '/../node_modules/d3/dist/'),
     express.static(__dirname + '/../node_modules/snapsvg/dist/'),
     express.static(__dirname + '/../node_modules/velocity-animate/'),
+    express.static(__dirname + '/../node_modules/@fortawesome/fontawesome-free/css/'),
     express.static(__dirname + '/../public/javascripts/'),
     express.static(__dirname + '/../public/images/'),
     express.static(__dirname + '/../public/css/'),
