@@ -321,23 +321,23 @@ p:last-child {
     padding: 90px 0px 100px 0px;
 }
 
-.contact{
+.docs{
     background: #363855;
 }
 
-.contact .contactwithmap_menu h2{
+.docs .docswithmap_menu h2{
     font-size:1.125rem;
     color:#fff;
 
 }
 
-.contact .contactwithmap_menu ul{
+.docs .docswithmap_menu ul{
     margin:0;
     padding: 0;
     list-style: none;
 }
-.contact .contactwithmap_menu ul li{}
-.contact .contactwithmap_menu ul li a{
+.docs .docswithmap_menu ul li{}
+.docs .docswithmap_menu ul li a{
     color: #fff;
     font-size: 1rem;
     line-height: 1rem;
@@ -345,9 +345,9 @@ p:last-child {
     padding-bottom: 10px;
     margin-bottom: 10px;
     display: inline-block;
-    width: 70px;
+
 }
-.contact .contactwithmap_menu ul li:hover a{
+.docs .docswithmap_menu ul li:hover a{
     color: #ffe13e;
     border-bottom: 1px solid #ffe13e;
 }

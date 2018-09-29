@@ -233,7 +233,8 @@ html(ng-app='myApp')
 						h3.date.timeline__day
 								| 2019 
 								span Q2
-						.roadmap-text 
+						.roadmap-text
+							p.timeline__day-sum Prediction Market 
 							p.timeline__day-sum IOS Wallet
 							p.timeline__day-sum Dapps
 							p.timeline__day-sum Brainstorming Sessions
@@ -828,7 +829,7 @@ html(ng-app='myApp')
 							.col-md-8.offset-sm-2
 								h3 IOS
 								a.w-100.walletstyle(href='#')
-									p Comming Soon
+									p Coming Soon
 				.row#web.selection.d-none
 					.col-md-12.text-center
 						h3 Web
@@ -909,23 +910,65 @@ html(ng-app='myApp')
 									h3 Medium
 									p Follow us on Medium
 	
-		section#contact.contact
+		section#docs.docs
 			.container
-				.col-md-3.col-12
-					.contactwithmap_menu
-						h2 Lorem Ipsum
-						ul.footer_menu
-							li
-								a(href='#home') Placeholder
-							li
-								a(href='#feature') Placeholder
-							li
-								a(href='#services') Placeholder
-							li
-								a(href='#downloads') Placeholder
-							li
-								a(href='#working') Placeholder
-
+				.row
+					.col-md-3
+						.docswithmap_menu
+							h2 Documentation
+							ul.footer_menu
+								li
+									a(href='#home') How to Stake?
+								li
+									a(href='#feature') Placeholder
+								li
+									a(href='#services') Placeholder
+								li
+									a(href='#downloads') Placeholder
+								li
+									a(href='#working') Placeholder
+					.col-md-3
+						.docswithmap_menu
+							h2 Resources
+							ul.footer_menu
+								li
+									a(href='https://github.com/runebase') Github
+								li
+									a(href='#feature') Placeholder
+								li
+									a(href='#services') Placeholder
+								li
+									a(href='#downloads') Placeholder
+								li
+									a(href='#working') Placeholder
+					.col-md-3
+						.docswithmap_menu
+							h2 Channels
+							ul.footer_menu
+								li
+									a(href='https://discord.gg/hYhZB9m') Discord
+								li
+									a(href='https://www.medium.com/@runebase') Medium
+								li
+									a(href='https://www.facebook.com/runebaseofficial') Facebook
+								li
+									a(href='#downloads') Placeholder
+								li
+									a(href='#working') Placeholder
+					.col-md-3
+						.docswithmap_menu
+							h2 Exchanges
+							ul.footer_menu
+								li
+									a(href='#home') Placeholder
+								li
+									a(href='#feature') Placeholder
+								li
+									a(href='#services') Placeholder
+								li
+									a(href='#downloads') Placeholder
+								li
+									a(href='#working') Placeholder
 		include includes/foot.pug
 
 		script(src='/assets/angular.js')
