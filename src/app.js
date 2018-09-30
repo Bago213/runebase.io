@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
-var manager = require('./routes/manager');
 
 var app = express();
 
@@ -23,33 +22,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
-app.use('/manager', manager);
 app.use('/assets', [
-    express.static(__dirname + '/../node_modules/vuetify/dist/'),
-    express.static(__dirname + '/../node_modules/jquery/dist/'),
-    express.static(__dirname + '/../node_modules/jquery.easing/'),
-    express.static(__dirname + '/../node_modules/bootstrap/dist/js/'),
-    express.static(__dirname + '/../node_modules/bootstrap/dist/fonts/'),
-    express.static(__dirname + '/../node_modules/bootstrap/dist/css/'),
-    express.static(__dirname + '/../node_modules/waypoints/lib/'),
-    express.static(__dirname + '/../node_modules/particles.js/'),
-    express.static(__dirname + '/../node_modules/ng-table/bundles/'),
-    express.static(__dirname + '/../node_modules/angular/'),
-    express.static(__dirname + '/../node_modules/vue/dist'),
-    express.static(__dirname + '/../node_modules/gsap/src/minified/'),
-    express.static(__dirname + '/../node_modules/scrollmagic/scrollmagic/minified/'),
-    express.static(__dirname + '/../node_modules/scrollmagic/scrollmagic/minified/plugins/'),
-    express.static(__dirname + '/../node_modules/npm-modernizr/'),
-    express.static(__dirname + '/../node_modules/d3/dist/'),
-    express.static(__dirname + '/../node_modules/snapsvg/dist/'),
-    express.static(__dirname + '/../node_modules/velocity-animate/'),
     express.static(__dirname + '/../node_modules/@fortawesome/fontawesome-free/css/'),
     express.static(__dirname + '/../public/javascripts/'),
     express.static(__dirname + '/../public/images/'),
     express.static(__dirname + '/../public/css/'),
     express.static(__dirname + '/../public/fonts/'),
+    express.static(__dirname + '/../dist/'),
 ]);
-
+app.use('/webfonts', [
+    express.static(__dirname + '/../node_modules/@fortawesome/fontawesome-free/webfonts/'),
+]);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

@@ -1,0 +1,12 @@
+window.$ = window.jQuery = require('jquery');
+require('bootstrap');
+require('particles.js/particles.js');
+require('gsap/src/minified/TweenMax.min.js');
+require('vuetify/dist/vuetify.min.js');
+require('jquery.easing/jquery.easing.min.js');
+window.d3 = require('d3/dist/d3.min.js');
+require('velocity-animate/velocity.min.js');
+var Snap = require( "imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js" );
+require('npm-modernizr/modernizr.js');
+var ScrollReveal = require('scrollreveal');
+window.sr = ScrollReveal();
